@@ -1,0 +1,19 @@
+/* Barra Lateral e Seleção */
+html ::-webkit-scrollbar {
+    width: 10px;
+}
+
+html ::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    /* From https://css.glass */
+    background: #4AAB31;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.2px);
+    -webkit-backdrop-filter: blur(4.2px);
+    border: 1px solid rgba(26, 85, 216, 0.24);
+}
+
+html ::-webkit-scrollbar-track {
+    background: #dbe1e3;
+}

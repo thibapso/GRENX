@@ -1,0 +1,71 @@
+.missao {
+    font-family: $font;
+    display: flex;
+    justify-content: center;
+
+    &__content {
+        display: flex;
+        justify-content: center;
+        align-items: center; /* Alinha verticalmente os elementos */
+        flex-direction: column;
+        width: 85%;
+        max-width: 2000px;
+    }
+
+    background-color: #ffffff;
+
+    i {
+        color: #09A93F;
+        text-align: center;
+    }
+
+    h2 {
+        color: #09763A;
+        text-align: center;
+        font-size: 4rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 130%;
+        width: 100%; /* Ajuste para ocupar o espaço necessário */
+        max-width: 70rem; /* Limita a largura do texto */
+        margin: 0 auto; /* Centraliza horizontalmente */
+    }
+
+    .sun {
+        font-size: 6rem;
+        padding: 2rem 0;
+    }
+
+    &__cards {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__cards div {
+        display: flex;
+        flex-direction: column;
+        width: 17rem;
+        height: 15rem;
+        align-items: center;
+        border-radius: 1.85rem;
+        border: 5px solid #09A93F;
+        justify-content: center;
+        gap: 1.5rem;
+        margin: 4rem;
+    }
+
+    &__cards div i {
+        font-size: 6rem;
+    }
+
+    &__cards div h2 {
+        color: #09A93F;
+        text-align: center;
+        font-family: Poppins;
+        font-size: 2.5rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 130%;
+        width: auto;
+    }
+}

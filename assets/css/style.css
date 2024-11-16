@@ -1,14 +1,371 @@
+@charset "UTF-8";
 /* Arquivo de estilo principal */
-html {
-  background-color: #86efac;
-  color: #14532d;
-  height: 100%;
+/* ___ Fonts ___ */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+header {
+  background: linear-gradient(90deg, rgb(74, 171, 49) 0%, rgb(207, 171, 17) 83%);
+  font-family: "Poppins", "Calibri", "sans-serif";
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  height: 6.5rem;
+}
+header nav {
+  font-size: 1.5rem;
+  width: 85%;
+  max-width: 2560px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header nav ul {
+  display: flex;
+  gap: 1.25rem;
+}
+header nav ul div {
+  display: flex;
+  gap: 0.25rem;
+  padding: 0.5rem 1rem;
+  transition: transform 0.5s ease-in-out;
+}
+header nav ul div:hover {
+  border-radius: 3.25rem;
+  background: var(--Color-2, #096639);
+}
+header nav ul a {
+  text-decoration: none;
+  color: #ffffff;
+}
+header nav .menu {
+  font-size: 2.5rem;
+}
+
+main {
+  background: linear-gradient(90deg, rgb(74, 171, 49) 0%, rgb(207, 171, 17) 83%);
+}
+main .titulo {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  width: 85%;
+  max-width: 2560px;
+  font-family: "Poppins", "Calibri", "sans-serif";
+  color: #ffffff;
+  gap: 2rem;
+  position: relative;
+  height: auto;
+  margin: 0 auto;
+  /* Centraliza horizontalmente o contêiner .titulo */
 }
-html h1 {
+main .titulo__info {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+  position: absolute;
+  top: 4rem;
+  left: 8%;
+  /* Ajuste fino para posicionar o texto */
+  width: 100%;
+  padding: 2rem 0;
+  margin-left: -7rem;
+}
+main .titulo__info h1,
+main .titulo__info p {
+  font-weight: 700;
+}
+main .titulo__info h1 {
+  font-size: 4rem;
+}
+main .titulo__info p {
   font-size: 2rem;
+}
+main .titulo__info p:first-of-type {
+  width: 50%;
+  /* Ajusta a largura do primeiro parágrafo */
+}
+main .titulo__image {
+  flex: 1.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  margin: 2.5rem 0;
+  width: 100%;
+  height: 50%;
+  padding: 2rem 0;
+  transform: translateX(0%);
+}
+main .titulo__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.conhecendo {
+  background: #F3F3F3;
+  font-family: "Poppins", "Calibri", "sans-serif";
+  padding: 2.85rem 0;
+}
+.conhecendo__content {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  align-items: center;
+  width: 85%;
+  margin: 0 auto;
+  max-width: 2000px;
+}
+.conhecendo__content p {
+  color: #09A63E;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+.conhecendo__content h2 {
+  color: var(--Color-2, #096639);
+  font-family: Poppins;
+  font-size: 3.75rem;
+  font-weight: 700;
+  line-height: 5rem;
+  text-transform: capitalize;
+}
+.conhecendo__content article {
+  color: var(--Color-2, #096639);
+  font-family: Poppins;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 2rem;
+}
+.conhecendo__data {
+  display: flex;
+  gap: 2rem;
+  /* Espaçamento entre os itens */
+}
+.conhecendo__data .conhecendo__iten {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Centraliza os itens dentro de cada div */
+  justify-content: center;
+}
+.conhecendo__data .number {
+  color: #096639;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-left: 1rem;
+  /* Espaço à esquerda do número */
+}
+.conhecendo__data .info {
+  color: #666666;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.conhecendo__data i {
+  font-size: 3rem;
+  color: #ffffff;
+  padding: 1rem;
+  background-color: #09A93F;
+  border-radius: 50%;
+  display: inline-block;
+  /* Garante que o ícone fique alinhado ao lado do número */
+}
+.conhecendo__data .conhecendo__principal {
+  display: flex;
+  align-items: center;
+  /* Alinha verticalmente o ícone e o número */
+  gap: 1rem;
+  /* Espaçamento entre o ícone e o número */
+}
+
+.vantagens {
+  background: #F3F3F3;
+  /* Cor de fundo */
+  font-family: "Poppins", "Calibri", "sans-serif";
+  display: flex;
+  justify-content: center;
+  padding: 4rem 0;
+}
+.vantagens__content {
+  display: flex;
+  justify-content: center;
+  width: 85%;
+  gap: 8rem;
+}
+.vantagens__first {
+  padding: 2rem 0;
+}
+.vantagens__veja {
+  color: #09A93F;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+.vantagens__title {
+  color: #096639;
+  font-size: 3.75rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 5rem;
+  text-transform: capitalize;
+}
+.vantagens__iten {
+  display: flex;
+  /* Organiza os itens na vertical */
+  align-items: flex-start;
+  /* Alinha os itens à esquerda */
+  text-align: left;
+  /* Garante que o texto fique alinhado à esquerda */
+  gap: 1rem;
+  /* Espaçamento entre os elementos */
+  margin: 4rem 0;
+  /* Espaçamento inferior para separar os itens */
+}
+.vantagens__iten img {
+  width: 100px;
+  /* Tamanho fixo para a imagem */
+  height: auto;
+  margin-bottom: 1rem;
+  /* Espaçamento entre a imagem e o título */
+}
+.vantagens__iten h2 {
+  font-size: 1.625rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2.375rem;
+  /* 146.154% */
+  color: #09A93F;
+}
+.vantagens__iten article {
+  width: 28rem;
+  color: #666;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2rem;
+  /* 177.778% */
+}
+
+.missao {
+  font-family: "Poppins", "Calibri", "sans-serif";
+  display: flex;
+  justify-content: center;
+  background-color: #ffffff;
+}
+.missao__content {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Alinha verticalmente os elementos */
+  flex-direction: column;
+  width: 85%;
+  max-width: 2000px;
+}
+.missao i {
+  color: #09A93F;
+  text-align: center;
+}
+.missao h2 {
+  color: #09763A;
+  text-align: center;
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+  width: 100%; /* Ajuste para ocupar o espaço necessário */
+  max-width: 70rem; /* Limita a largura do texto */
+  margin: 0 auto; /* Centraliza horizontalmente */
+}
+.missao .sun {
+  font-size: 6rem;
+  padding: 2rem 0;
+}
+.missao__cards {
+  display: flex;
+  justify-content: space-around;
+}
+.missao__cards div {
+  display: flex;
+  flex-direction: column;
+  width: 17rem;
+  height: 15rem;
+  align-items: center;
+  border-radius: 1.85rem;
+  border: 5px solid #09A93F;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 4rem;
+}
+.missao__cards div i {
+  font-size: 6rem;
+}
+.missao__cards div h2 {
+  color: #09A93F;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+  width: auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: -5rem;
+  right: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #09A93F;
+  width: 3.85rem;
+  height: 4rem;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 2rem;
+  transition: bottom 0.3s ease-out, background-color 0.3s ease, transform 0.3s ease;
+  z-index: 10;
+  cursor: pointer;
+  font-weight: 700;
+}
+.back-to-top.visible {
+  bottom: 2rem;
+}
+.back-to-top:hover {
+  background-color: #09763A;
+  transform: translateY(-4px);
+}
+
+/* Barra Lateral e Seleção */
+html ::-webkit-scrollbar {
+  width: 10px;
+}
+
+html ::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  /* From https://css.glass */
+  background: #4AAB31;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.2px);
+  -webkit-backdrop-filter: blur(4.2px);
+  border: 1px solid rgba(26, 85, 216, 0.24);
+}
+
+html ::-webkit-scrollbar-track {
+  background: #dbe1e3;
 }
 
 /*# sourceMappingURL=style.css.map */

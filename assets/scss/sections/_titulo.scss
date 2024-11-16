@@ -1,0 +1,73 @@
+main {
+  background: $gradient-titulo;
+
+  .titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 85%;
+    max-width: 2560px;
+    font-family: $font;
+    color: #ffffff;
+    gap: 2rem;
+    position: relative;
+    height: auto;
+    margin: 0 auto;
+    /* Centraliza horizontalmente o contêiner .titulo */
+
+    &__info {
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 1rem;
+      position: absolute;
+      top: 4rem;
+      left: 8%;
+      /* Ajuste fino para posicionar o texto */
+      width: 100%;
+      padding: 2rem 0;
+      margin-left: -7rem;
+
+      h1,
+      p {
+        font-weight: 700;
+      }
+
+      h1 {
+        font-size: 4rem;
+      }
+
+      p {
+        font-size: 2rem;
+      }
+
+      p:first-of-type {
+        width: 50%;
+        /* Ajusta a largura do primeiro parágrafo */
+      }
+    }
+
+    &__image {
+      flex: 1.5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      margin: 2.5rem 0;
+      width: 100%;
+      height: 50%;
+      padding: 2rem 0;
+      transform: translateX(0%);
+    }
+
+    &__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

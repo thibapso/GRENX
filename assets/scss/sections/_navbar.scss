@@ -1,12 +1,43 @@
-html {
-  background-color: #86efac;
-  color: #14532d;
-  height: 100%;
+header {
+  background: $gradient-titulo;
+  font-family: $font;
+  color: #ffffff;
   display: flex;
   justify-content: center;
-  align-items: center;
+  height: 6.5rem;
 
-  h1 {
-    font-size: 2rem;
+  nav {
+    font-size: 1.5rem;
+    width: 85%;
+    max-width: 2560px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    ul {
+      display: flex;
+      gap: 1.25rem;
+
+      div {
+        display: flex;
+        gap: 0.25rem;
+        padding: 0.5rem 1rem;
+        transition: transform .5s ease-in-out;
+
+        &:hover {
+          border-radius: 3.25rem;
+          background: var(--Color-2, #096639);
+        }
+      }
+
+      a {
+        text-decoration: none;
+        color: #ffffff;
+      }
+    }
+
+    .menu {
+      font-size: 2.5rem;
+    }
   }
 }
