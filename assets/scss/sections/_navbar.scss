@@ -8,21 +8,70 @@ header {
 
   nav {
     font-size: 1.5rem;
-    width: 85%;
+    width: 80%;
     max-width: 2560px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 6rem;
 
     ul {
       display: flex;
       gap: 1.25rem;
 
+      .nav-item {
+        position: relative;
+      }
+
+      .dropdown {
+        position: relative;
+
+        &:hover .dropdown-menu {
+          display: block;
+        }
+
+        .dropdown-menu {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          background-color: var(--Color-2, #096639);
+          padding: 1rem 1.5rem; /* Aumenta o tamanho da caixa */
+          border-radius: 0.5rem;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          transition: opacity 0.3s ease, visibility 0.3s ease;
+          z-index: 2; /* Garantir que o dropdown fique acima de outros elementos */
+          margin-top: 1rem; /* Move o dropdown mais para baixo */
+        }
+
+        .dropdown-menu li {
+          padding: 1rem 1.5rem; /* Aumenta o espaçamento entre os itens */
+        }
+
+        .dropdown-menu li a {
+          color: #ffffff;
+          text-decoration: none;
+        }
+
+        .dropdown-menu li a:hover {
+          background-color: var(--Color-3, #048c7f);
+        }
+
+        i {
+          margin-left: 0.5rem; /* Espaço entre o texto e a setinha */
+          transition: transform 0.3s ease; /* Animação suave na rotação da setinha */
+        }
+
+        &:hover i {
+          transform: rotate(180deg); /* Rotaciona a setinha ao passar o mouse */
+        }
+      }
+
       div {
         display: flex;
         gap: 0.25rem;
         padding: 0.5rem 1rem;
-        transition: transform .5s ease-in-out;
+        transition: transform 0.5s ease-in-out;
 
         &:hover {
           border-radius: 3.25rem;

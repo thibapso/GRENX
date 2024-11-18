@@ -1,0 +1,33 @@
+footer {
+  background: $gradient-titulo;
+  color: #ffffff;
+  font-family: $font;
+  height: 16.5rem;
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center;     /* Centraliza verticalmente */
+}
+
+.content {
+  width: 100%;            /* Garante que ocupe todo o espaço disponível */
+  max-width: 80%;         /* Limita a largura a 80% */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;    /* Garante que os itens dentro de .content também sejam centralizados */
+}
+
+.content__up,
+.content__down {
+  display: flex;
+  justify-content: center; /* Alinha os itens horizontalmente */
+  align-items: center;     /* Alinha os itens verticalmente */
+}
+
+.content__down {
+  text-align: center;     /* Centraliza o texto */
+}
+
+.content__up h2 {
+  margin-left: 1rem;
+}
