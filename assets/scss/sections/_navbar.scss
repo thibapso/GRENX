@@ -1,10 +1,65 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* Remover display: none do CSS para o .overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: none; /* Pode ser manipulado pelo JS */
+}
+
+/* Modificar o display do menu e overlay para funcionar corretamente */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--Color-2, #096639);
+  padding: 2rem 3rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10; /* Garantir que o menu fique acima de outros elementos */
+}
+
+.dropdown.active .dropdown-menu {
+  display: block;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5; /* Deve ficar atrás do dropdown */
+  display: none;
+}
+
+.dropdown.active ~ .overlay {
+  display: block;
+}
+
+
 header {
   background: $gradient-titulo;
   font-family: $font;
   color: #ffffff;
   display: flex;
   justify-content: center;
-  height: 6.5rem;
+  height: 4.5rem; /* Altura reduzida */
+  position: fixed; /* Fixar no topo */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Garantir que a navbar fique acima de outros elementos */
 
   nav {
     font-size: 1.5rem;
@@ -13,7 +68,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 6rem;
+    height: 4.5rem; /* Altura reduzida */
 
     ul {
       display: flex;
@@ -21,31 +76,39 @@ header {
 
       .nav-item {
         position: relative;
+
+        i {
+          cursor: pointer;
+        }
       }
 
       .dropdown {
         position: relative;
 
-        &:hover .dropdown-menu {
-          display: block;
+        /* Dropdown abre somente com a classe .active */
+        &.active .dropdown-menu {
+          display: block; /* Exibe o dropdown quando a classe 'active' é adicionada */
         }
 
         .dropdown-menu {
-          display: none;
+          display: none; /* Inicialmente escondido */
           position: absolute;
           top: 100%;
-          left: 0;
+          left: -20%; /* Move o dropdown mais para a esquerda */
           background-color: var(--Color-2, #096639);
-          padding: 1rem 1.5rem; /* Aumenta o tamanho da caixa */
+          padding: 2rem 3rem; /* Aumenta o espaço interno */
           border-radius: 0.5rem;
           box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
           transition: opacity 0.3s ease, visibility 0.3s ease;
-          z-index: 2; /* Garantir que o dropdown fique acima de outros elementos */
-          margin-top: 1rem; /* Move o dropdown mais para baixo */
+          z-index: 2;
+          margin-top: 0.5rem; /* Ajustado para alinhar melhor */
+          width: 20rem; /* Largura maior */
+          height: auto; /* Altura ajustável dependendo do conteúdo */
+          white-space: nowrap; /* Impede quebra de linha */
         }
 
         .dropdown-menu li {
-          padding: 1rem 1.5rem; /* Aumenta o espaçamento entre os itens */
+          padding: 0.5rem 1rem; /* Ajuste do padding para um layout mais uniforme */
         }
 
         .dropdown-menu li a {
@@ -58,12 +121,13 @@ header {
         }
 
         i {
-          margin-left: 0.5rem; /* Espaço entre o texto e a setinha */
-          transition: transform 0.3s ease; /* Animação suave na rotação da setinha */
+          margin-left: 0.5rem;
+          transition: transform 0.3s ease;
         }
 
-        &:hover i {
-          transform: rotate(180deg); /* Rotaciona a setinha ao passar o mouse */
+        /* Ícone rotaciona somente quando o menu está ativo */
+        &.active i {
+          transform: rotate(180deg);
         }
       }
 
@@ -82,6 +146,21 @@ header {
       a {
         text-decoration: none;
         color: #ffffff;
+      }
+
+      /* Quando o dropdown estiver ativo, o item 'sobre' recebe o fundo verde-escuro */
+      li.sobre {
+        &.active {
+          background: var(--Color-3, #048c7f); /* Fundo verde escuro */
+          border-radius: 3.25rem; /* Borda arredondada */
+          transition: background 0.3s ease; /* Transição suave */
+        }
+
+        /* Efeito de hover normal para o item 'sobre' */
+        &:hover {
+          background: var(--Color-3, #048c7f);
+          border-radius: 3.25rem;
+        }
       }
     }
 

@@ -2,32 +2,101 @@ footer {
   background: $gradient-titulo;
   color: #ffffff;
   font-family: $font;
-  height: 16.5rem;
   display: flex;
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center;     /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  padding: 2rem 0;
 }
 
 .content {
-  width: 100%;            /* Garante que ocupe todo o espaço disponível */
-  max-width: 80%;         /* Limita a largura a 80% */
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;    /* Garante que os itens dentro de .content também sejam centralizados */
+  justify-content: space-between; /* Espaço uniforme entre as colunas */
+  align-items: flex-start; /* Alinha o conteúdo ao topo */
+  width: 80%; /* Garante uma largura consistente */
+  max-width: 1200px; /* Limita a largura máxima */
+  gap: 5rem; /* Espaçamento entre as colunas */
+  margin-left: 2rem;
+  padding: 2rem;
 }
 
-.content__up,
-.content__down {
+.column {
   display: flex;
-  justify-content: center; /* Alinha os itens horizontalmente */
-  align-items: center;     /* Alinha os itens verticalmente */
+  flex-direction: column; /* Certifica que os elementos internos fiquem em coluna */
 }
 
-.content__down {
-  text-align: center;     /* Centraliza o texto */
+.column--logo {
+  flex: 0.4; /* Define largura proporcional menor */
+  align-items: flex-start; /* Garante alinhamento à esquerda */
+  gap: 1rem; /* Espaçamento entre logo e ícones */
 }
 
-.content__up h2 {
-  margin-left: 1rem;
+.column--about {
+  flex: 1.4; /* Aumenta a largura da coluna do meio */
+  align-items: flex-start; /* Garante alinhamento à esquerda */
+}
+
+.column--newsletter {
+  flex: 1; /* Define largura intermediária */
+  align-items: flex-start; /* Garante alinhamento à esquerda */
+  gap: 1rem; /* Espaçamento entre input e botão */
+}
+
+.column--about h2, .column--newsletter h2 {
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.content__icon {
+  font-size: 2rem;
+  display: flex;
+  gap: 1rem; /* Espaçamento entre os ícones */
+}
+
+.column--about article {
+  line-height: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.newsletter {
+  display: flex;
+}
+
+.newsletter-input {
+  padding: 0.8rem;
+  border-radius: 12px 0 0 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1rem;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  width: 180px;
+
+  &::placeholder {
+    color: #ffffff;
+    text-align: center;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: white;
+    background: rgba(255, 255, 255, 0.2);
+  }
+}
+
+.newsletter-btn {
+  padding: 0.8rem 1rem;
+  border-radius: 0 12px 12px 0;
+  border: none;
+  background-color: #ffffff;
+  color: #28a745;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: #218838;
+    color: #ffffff;
+  }
 }

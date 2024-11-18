@@ -24,27 +24,36 @@
               <a href="#" class="dropdown-toggle">Sobre</a>
               <i class="ri-arrow-down-s-line"></i>
               <ul class="dropdown-menu">
-                <li><a href="#">Quem Somos</a></li>
-                <li><a href="#">Missão</a></li>
-                <li><a href="#">Visão</a></li>
+                <li><a href="#titulo">Título</a></li>
+                <!-- link para a seção título -->
+                <li><a href="#compare">Compare</a></li>
+                <!-- link para a seção compare -->
+                <li><a href="#conhecendo">Conheça</a></li>
+                <!-- link para a seção conhecendo -->
+                <li><a href="#vantagens">Vantagens</a></li>
+                <!-- link para a seção vantagens -->
+                <li><a href="#missao">Missão</a></li>
+                <!-- link para a seção missão -->
+                <li><a href="#avaliacao">Avaliação</a></li>
+                <!-- link para a seção avaliação -->
               </ul>
             </li>
           </div>
           <div>
+            <li><a href="energia.html">Energia</a></li>
+          </div>
+          <div>
+            <li><a href="simule.html">Simule</a></li>
+          </div>
+          <div>
             <li><a href="conheca.html">Conheça</a></li>
-          </div>
-          <div>
-            <li><a href="social.html">Social</a></li>
-          </div>
-          <div>
-            <li><a href="blog.html">Blog</a></li>
           </div>
         </ul>
       </nav>
     </header>
 
     <main>
-      <section class="titulo">
+      <section id="titulo" class="titulo">
         <div class="titulo__info">
           <div class="titulo__desc-div">
             <h1>Conta de Luz Alta?</h1>
@@ -61,12 +70,72 @@
         </div>
       </section>
 
-      <section class="compare"></section>
+      <section id="compare" class="compare">
+        <div class="compare__content">
+          <h2 class="compare__title">
+            Compare o Custo da Sua Conta de Energia
+          </h2>
+          <div class="compare__cards">
+            <div class="compare__main">
+              <div class="compare__input">
+                <h2>Digite o consumo em kWh:</h2>
+                <input id="consumo" type="number" placeholder="150 kWh" />
+              </div>
+              <div class="compare__input">
+                <h2>Quanto você paga atualmente? (R$)</h2>
+                <input id="precoAtual" type="number" placeholder="R$150,00" />
+              </div>
+              <button id="comparar">Comparar</button>
+              <div class="compare__dado">
+                <div class="compare__retangulo"></div>
+                <div>
+                  <h2 class="compare__where">
+                    Onde encontrar o consumo em kWh na sua conta?
+                  </h2>
+                  <article>
+                    O consumo em kWh geralmente está localizado na seção de
+                    detalhes de consumo da sua conta de luz. Procure por termos
+                    como "Consumo do mês (kWh)" ou "Total de kWh consumido".
+                  </article>
+                </div>
+              </div>
+            </div>
 
-      <section class="conhecendo">
+            <div class="compare__empresa">
+              <div class="compare__atual">
+                <h2>Empresa atual</h2>
+                <img
+                  src="assets/img/compare/EcoEnergy.webp"
+                  alt="Logo EcoEnergy"
+                />
+                <h2 id="preco-atual">R$150,00</h2>
+              </div>
+
+              <div class="compare__nova">
+                <img
+                  class="compare__selection"
+                  src="assets/img/compare/triangulo.svg"
+                  alt=""
+                />
+                <h2>Nova empresa</h2>
+                <img
+                  src="assets/img/compare/GlobalEnergia.webp"
+                  alt="Logo GlobalEnergia"
+                />
+                <div class="compare__economia">
+                  <h2 id="preco-nova">R$120,00</h2>
+                  <p id="economia">Economizou: R$30,00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="conhecendo" class="conhecendo">
         <div class="conhecendo__content">
           <div>
-            <img src="assets/img/conhecendo/trabalhadores.png" alt="" />
+            <img src="assets/img/conhecendo/trabalhadores.webp" alt="" />
           </div>
           <div>
             <p>Bem-vindo à Nova Era da Energia no Brasil</p>
@@ -96,7 +165,7 @@
         </div>
       </section>
 
-      <section class="vantagens">
+      <section id="vantagens" class="vantagens">
         <div class="vantagens__content">
           <div class="vantagens__first">
             <p class="vantagens__veja">Conheça nossas</p>
@@ -145,7 +214,7 @@
         </div>
       </section>
 
-      <section class="missao">
+      <section id="missao" class="missao">
         <div class="missao__content">
           <i class="ri-sun-line sun"></i>
           <h2>Energia Transparente e Sustentável ao Seu Alcance</h2>
@@ -166,7 +235,7 @@
         </div>
       </section>
 
-      <section class="avaliacao">
+      <section id="avaliacao" class="avaliacao">
         <div class="avaliacao__content">
           <h2 class="avaliacao__title">
             Histórias reais de quem está economizando
@@ -214,27 +283,39 @@
 
     <footer>
       <div class="content">
-        <div class="content__up">
-          <img src="assets/img/logo.svg" alt="" />
-          <h2>Sobre</h2>
-          <h2>Assine nossa Newsletter</h2>
-        </div>
-        <div class="content__down">
-          <div>
+        <div class="column column--logo">
+          <img src="assets/img/logo.svg" alt="Logo" />
+          <div class="content__icon">
             <i class="ri-instagram-line"></i>
             <i class="ri-linkedin-box-line"></i>
-            <i class="ri-youtube-line"></i>
           </div>
+        </div>
+        <div class="column column--about">
+          <h2>Sobre</h2>
           <article>
             A GRENX facilita a comparação entre empresas de energia no Brasil,
             ajudando consumidores a escolher a fornecedora ideal com base em
             economia, qualidade e sustentabilidade.
           </article>
         </div>
+        <div class="column column--newsletter">
+          <h2>Assine nossa Newsletter</h2>
+          <div class="newsletter">
+            <input
+              type="text"
+              placeholder="Insira seu e-mail"
+              class="newsletter-input"
+            />
+            <button class="newsletter-btn">Inscrever-se</button>
+          </div>
+        </div>
       </div>
     </footer>
+
     <i class="ri-arrow-up-s-line back-to-top" id="backToTop"></i>
 
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/compare.js"></script>
     <script src="assets/js/back-to-top.js"></script>
   </body>
 </html>

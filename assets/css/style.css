@@ -2,13 +2,67 @@
 /* Arquivo de estilo principal */
 /* ___ Fonts ___ */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
+/* Remover display: none do CSS para o .overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: none; /* Pode ser manipulado pelo JS */
+}
+
+/* Modificar o display do menu e overlay para funcionar corretamente */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--Color-2, #096639);
+  padding: 2rem 3rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10; /* Garantir que o menu fique acima de outros elementos */
+}
+
+.dropdown.active .dropdown-menu {
+  display: block;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5; /* Deve ficar atrás do dropdown */
+  display: none;
+}
+
+.dropdown.active ~ .overlay {
+  display: block;
+}
+
 header {
   background: linear-gradient(90deg, rgb(74, 171, 49) 0%, rgb(207, 171, 17) 83%);
   font-family: "Poppins", "Calibri", "sans-serif";
   color: #ffffff;
   display: flex;
   justify-content: center;
-  height: 6.5rem;
+  height: 4.5rem; /* Altura reduzida */
+  position: fixed; /* Fixar no topo */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Garantir que a navbar fique acima de outros elementos */
 }
 header nav {
   font-size: 1.5rem;
@@ -17,36 +71,45 @@ header nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 6rem;
+  height: 4.5rem; /* Altura reduzida */
 }
 header nav ul {
   display: flex;
   gap: 1.25rem;
+  /* Quando o dropdown estiver ativo, o item 'sobre' recebe o fundo verde-escuro */
 }
 header nav ul .nav-item {
   position: relative;
 }
+header nav ul .nav-item i {
+  cursor: pointer;
+}
 header nav ul .dropdown {
   position: relative;
+  /* Dropdown abre somente com a classe .active */
+  /* Ícone rotaciona somente quando o menu está ativo */
 }
-header nav ul .dropdown:hover .dropdown-menu {
-  display: block;
+header nav ul .dropdown.active .dropdown-menu {
+  display: block; /* Exibe o dropdown quando a classe 'active' é adicionada */
 }
 header nav ul .dropdown .dropdown-menu {
-  display: none;
+  display: none; /* Inicialmente escondido */
   position: absolute;
   top: 100%;
-  left: 0;
+  left: -20%; /* Move o dropdown mais para a esquerda */
   background-color: var(--Color-2, #096639);
-  padding: 1rem 1.5rem; /* Aumenta o tamanho da caixa */
+  padding: 2rem 3rem; /* Aumenta o espaço interno */
   border-radius: 0.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: opacity 0.3s ease, visibility 0.3s ease;
-  z-index: 2; /* Garantir que o dropdown fique acima de outros elementos */
-  margin-top: 1rem; /* Move o dropdown mais para baixo */
+  z-index: 2;
+  margin-top: 0.5rem; /* Ajustado para alinhar melhor */
+  width: 20rem; /* Largura maior */
+  height: auto; /* Altura ajustável dependendo do conteúdo */
+  white-space: nowrap; /* Impede quebra de linha */
 }
 header nav ul .dropdown .dropdown-menu li {
-  padding: 1rem 1.5rem; /* Aumenta o espaçamento entre os itens */
+  padding: 0.5rem 1rem; /* Ajuste do padding para um layout mais uniforme */
 }
 header nav ul .dropdown .dropdown-menu li a {
   color: #ffffff;
@@ -56,11 +119,11 @@ header nav ul .dropdown .dropdown-menu li a:hover {
   background-color: var(--Color-3, #048c7f);
 }
 header nav ul .dropdown i {
-  margin-left: 0.5rem; /* Espaço entre o texto e a setinha */
-  transition: transform 0.3s ease; /* Animação suave na rotação da setinha */
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
 }
-header nav ul .dropdown:hover i {
-  transform: rotate(180deg); /* Rotaciona a setinha ao passar o mouse */
+header nav ul .dropdown.active i {
+  transform: rotate(180deg);
 }
 header nav ul div {
   display: flex;
@@ -76,12 +139,25 @@ header nav ul a {
   text-decoration: none;
   color: #ffffff;
 }
+header nav ul li.sobre {
+  /* Efeito de hover normal para o item 'sobre' */
+}
+header nav ul li.sobre.active {
+  background: var(--Color-3, #048c7f); /* Fundo verde escuro */
+  border-radius: 3.25rem; /* Borda arredondada */
+  transition: background 0.3s ease; /* Transição suave */
+}
+header nav ul li.sobre:hover {
+  background: var(--Color-3, #048c7f);
+  border-radius: 3.25rem;
+}
 header nav .menu {
   font-size: 2.5rem;
 }
 
 main {
   background: linear-gradient(90deg, rgb(74, 171, 49) 0%, rgb(207, 171, 17) 83%);
+  padding-top: 4.5rem; /* Compensa a altura do header fixo */
 }
 main .titulo {
   display: flex;
@@ -96,7 +172,6 @@ main .titulo {
   position: relative;
   height: 100vh; /* Mantém a altura total da seção */
   margin: 0 auto;
-  padding: 0; /* Sem padding adicional */
 }
 main .titulo__info {
   z-index: 1;
@@ -165,6 +240,161 @@ main .titulo__image img {
   main .titulo__image {
     height: 60%; /* Altura da imagem reduzida para telas menores */
   }
+}
+
+.compare {
+  background: #f3f3f3;
+  font-family: "Poppins", "Calibri", "sans-serif";
+  padding: 2.85rem 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+.compare__title {
+  color: #096639;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 5rem; /* 166.667% */
+  text-transform: capitalize;
+}
+.compare__content {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.compare__cards {
+  display: flex;
+  align-items: center;
+  gap: 7rem;
+}
+.compare__empresa {
+  display: flex;
+  gap: 4rem;
+  position: relative;
+}
+.compare__main {
+  border: 3px solid #09a93f;
+  border-radius: 1.85rem;
+  width: 28rem;
+  height: 30rem;
+  padding: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.compare__input {
+  color: #096639;
+  font-size: 1.25rem;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.compare__atual {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border: 3px solid #096639;
+  color: #096639;
+  border-radius: 1.85rem;
+  height: 20rem;
+  width: 12rem;
+}
+.compare__atual h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.compare__nova {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border: 3px solid #09a93f;
+  background-color: #09a93f;
+  color: #ffffff;
+  border-radius: 1.85rem;
+  height: 20rem;
+  width: 12rem;
+  position: relative;
+}
+.compare__nova h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.compare__selection {
+  margin-top: -0.5rem;
+}
+.compare__economia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.compare__main input[type=number] {
+  border: 1px solid #096639;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  background: transparent;
+}
+.compare__main input[type=number]:focus {
+  border: 2.5px solid #096639;
+  outline: none; /* Remove a borda padrão azul */
+}
+.compare__dado {
+  background-color: #f3f3f3;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.compare__retangulo {
+  margin-top: 1rem;
+  width: 1rem;
+  height: 10rem;
+  background-color: #f7aa06;
+}
+.compare__where {
+  font-weight: 700;
+  color: #096639;
+  margin: 1rem 0;
+}
+.compare article {
+  line-height: 2rem; /* 200% */
+  font-size: 1rem;
+  color: #096639;
+  width: 25rem;
+}
+.compare .compare__empresa img[src*=triangulo] {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+}
+
+#preco-atual,
+#preco-nova {
+  font-size: 2.25rem;
+}
+
+#comparar {
+  width: 15rem;
+  height: 3rem;
+  margin: 0.5rem 0;
+  border-radius: 0.5rem;
+  border: 1px solid #09a93f;
+  background: #09a93f;
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 700;
 }
 
 .conhecendo {
@@ -259,7 +489,7 @@ main .titulo__image img {
   display: flex;
   justify-content: center;
   width: 80%;
-  gap: 8rem;
+  gap: 12rem;
 }
 .vantagens__first {
   padding: 2rem 0;
@@ -446,34 +676,100 @@ footer {
   background: linear-gradient(90deg, rgb(74, 171, 49) 0%, rgb(207, 171, 17) 83%);
   color: #ffffff;
   font-family: "Poppins", "Calibri", "sans-serif";
-  height: 16.5rem;
   display: flex;
-  justify-content: center; /* Centraliza horizontalmente */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
   align-items: center; /* Centraliza verticalmente */
+  padding: 2rem 0;
 }
 
 .content {
-  width: 100%; /* Garante que ocupe todo o espaço disponível */
-  max-width: 80%; /* Limita a largura a 80% */
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; /* Garante que os itens dentro de .content também sejam centralizados */
+  justify-content: space-between; /* Espaço uniforme entre as colunas */
+  align-items: flex-start; /* Alinha o conteúdo ao topo */
+  width: 80%; /* Garante uma largura consistente */
+  max-width: 1200px; /* Limita a largura máxima */
+  gap: 5rem; /* Espaçamento entre as colunas */
+  margin-left: 2rem;
+  padding: 2rem;
 }
 
-.content__up,
-.content__down {
+.column {
   display: flex;
-  justify-content: center; /* Alinha os itens horizontalmente */
-  align-items: center; /* Alinha os itens verticalmente */
+  flex-direction: column; /* Certifica que os elementos internos fiquem em coluna */
 }
 
-.content__down {
-  text-align: center; /* Centraliza o texto */
+.column--logo {
+  flex: 0.4; /* Define largura proporcional menor */
+  align-items: flex-start; /* Garante alinhamento à esquerda */
+  gap: 1rem; /* Espaçamento entre logo e ícones */
 }
 
-.content__up h2 {
-  margin-left: 1rem;
+.column--about {
+  flex: 1.4; /* Aumenta a largura da coluna do meio */
+  align-items: flex-start; /* Garante alinhamento à esquerda */
+}
+
+.column--newsletter {
+  flex: 1; /* Define largura intermediária */
+  align-items: flex-start; /* Garante alinhamento à esquerda */
+  gap: 1rem; /* Espaçamento entre input e botão */
+}
+
+.column--about h2, .column--newsletter h2 {
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.content__icon {
+  font-size: 2rem;
+  display: flex;
+  gap: 1rem; /* Espaçamento entre os ícones */
+}
+
+.column--about article {
+  line-height: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.newsletter {
+  display: flex;
+}
+
+.newsletter-input {
+  padding: 0.8rem;
+  border-radius: 12px 0 0 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1rem;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  width: 180px;
+}
+.newsletter-input::placeholder {
+  color: #ffffff;
+  text-align: center;
+}
+.newsletter-input:focus {
+  outline: none;
+  border-color: white;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.newsletter-btn {
+  padding: 0.8rem 1rem;
+  border-radius: 0 12px 12px 0;
+  border: none;
+  background-color: #ffffff;
+  color: #28a745;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.newsletter-btn:hover {
+  background-color: #218838;
+  color: #ffffff;
 }
 
 html {

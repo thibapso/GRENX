@@ -1,5 +1,6 @@
 main {
   background: $gradient-titulo;
+  padding-top: 4.5rem; /* Compensa a altura do header fixo */
 
   .titulo {
     display: flex;
@@ -14,7 +15,6 @@ main {
     position: relative;
     height: 100vh; /* Mantém a altura total da seção */
     margin: 0 auto;
-    padding: 0; /* Sem padding adicional */
 
     &__info {
       z-index: 1;
