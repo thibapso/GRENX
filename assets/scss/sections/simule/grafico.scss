@@ -1,0 +1,56 @@
+.grafico {
+  background: #f3f3f3; // Fundo da seção
+  font-family: $font;
+  padding: 3rem 0; // Espaçamento da seção
+  color: #096639;
+
+  &__content {
+    display: flex;
+    flex-direction: column; // Organiza os itens verticalmente
+    align-items: flex-start; // Alinha os itens à esquerda
+    justify-content: center; // Centraliza verticalmente se necessário
+    width: 80%; // Define a largura máxima
+    margin: 0 auto; // Centraliza horizontalmente o conteúdo
+    text-align: left; // Garante que o texto fique alinhado à esquerda
+    gap: 1.5rem; // Espaçamento entre os itens
+  }
+
+  h1 {
+    font-size: 2.25rem; // Ajusta o tamanho do título
+    font-weight: 700; // Deixa o título em negrito
+    margin-bottom: 1rem; // Espaçamento inferior
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%; /* 2.8875rem */
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.5; // Melhora a leitura
+  }
+
+  article {
+    font-size: 1rem;
+    line-height: 1.8; // Melhora a leitura para blocos maiores de texto
+  }
+}
+
+@media (max-width: 768px) {
+  .grafico__content {
+    width: 90%; // Aumenta a largura em telas menores
+    padding: 1rem; // Reduz o espaçamento interno
+  }
+
+  h1 {
+    font-size: 1.5rem; // Ajusta o tamanho do título
+  }
+
+  p,
+  article {
+    font-size: 0.9rem; // Reduz o tamanho do texto
+  }
+}

@@ -1,0 +1,53 @@
+.second {
+  color: #096639;
+  font-family: $font;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 3rem;
+    width: 80%;
+
+    h2 {
+      font-size: 3rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 5rem; /* 166.667% */
+      text-transform: capitalize;
+      padding-bottom: 1.5rem;
+    }
+
+    article {
+      text-align: center;
+      font-size: 1.5rem;
+      width: 60rem;
+      font-style: normal;
+      line-height: 180%;
+      letter-spacing: 0.03rem;
+    }
+
+    p {
+      text-align: center;
+      color: #f7aa06;
+      font-size: 2rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 180%;
+      letter-spacing: 0.05rem;
+      width: 55rem;
+    }
+  }
+
+  &__explicativo {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+}

@@ -1,0 +1,70 @@
+.economize {
+  background: #f3f3f3; // Fundo da seção
+  font-family: $font;
+  padding: 3rem 0; // Espaçamento da seção
+  color: #096639;
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    background-color: #f7aa06; // Fundo laranja para o conteúdo
+    padding: 2rem;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    gap: 2rem;
+
+    img {
+      margin-top: -2.6rem;
+    }
+
+    hr {
+      width: 0.4rem;
+      height: 5rem;
+      background-color: #ffffff;
+      border: none;
+    }
+
+    article {
+      text-align: left;
+      color: #ffffff;
+      width: 45rem;
+      font-size: 1.25rem;
+    }
+
+    .economize__link {
+      align-self: center; // Centraliza verticalmente
+      display: inline-block; // Garante comportamento de botão
+      text-decoration: none; // Remove sublinhado
+      border-radius: 0.45rem;
+      border: 3px solid #f5f6f7;
+      background-color: #09a93f;
+      font-weight: 700;
+      color: #ffffff;
+      padding: 0.85rem 1.5rem;
+      white-space: nowrap;
+      text-align: center;
+      transition: all 0.3s ease-in-out; // Suaviza transições
+
+      &:hover {
+        background-color: #0c7f32; // Cor de fundo mais escura no hover
+        color: #e6e6e6; // Cor do texto no hover
+        transform: scale(1.05); // Leve aumento no tamanho
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Sombra no hover
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .economize__content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .economize__link {
+    width: 100%; // Deixa o botão ocupar toda a largura disponível
+  }
+}

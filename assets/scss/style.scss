@@ -1,12 +1,25 @@
 /* Arquivo de estilo principal */
 @import "variables";
+
 @import "sections/navbar";
-@import "sections/titulo";
-@import "sections/compare";
-@import "sections/conhecendo";
-@import "sections/vantagens";
-@import "sections/missao";
-@import "sections/avaliacao";
 @import "sections/footer";
+
+@import "sections/index/titulo";
+@import "sections/index/compare";
+@import "sections/index/conhecendo";
+@import "sections/index/vantagens";
+@import "sections/index/missao";
+@import "sections/index/avaliacao";
+
+@import "sections/energia/first";
+@import "sections/energia/second";
+@import "sections/energia/third";
+
+@import "sections/simule/grafico.scss";
+@import "sections/simule/economize.scss";
+
+@import "sections/conheca/aprenda.scss";
+@import "sections/conheca/blog.scss";
+
 @import "resources/back-to-top";
 @import "resources/webkit.scss";

@@ -1,0 +1,170 @@
+.missao {
+  font-family: $font;
+  display: flex;
+  justify-content: center;
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    max-width: 2000px;
+  }
+
+  background-color: #ffffff;
+
+  i {
+    color: #09a93f;
+    text-align: center;
+  }
+
+  h2 {
+    color: #09763a;
+    text-align: center;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    width: 100%;
+    max-width: 70rem;
+    margin: 0 auto;
+  }
+
+  .sun {
+    font-size: 6rem;
+    padding: 2rem 0;
+  }
+
+  &__cards {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+    width: 100%;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    width: 17rem;
+    height: 20rem; /* Altura fixa para evitar alteração */
+    align-items: center;
+    border-radius: 1.85rem;
+    border: 5px solid #09a93f;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 2rem;
+    padding: 1rem;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    transition: background-color 0.3s, color 0.3s;
+
+    &.active {
+      background-color: #09a93f;
+      color: #ffffff;
+
+      .default-content,
+      .default-title,
+      .add-icon.default {
+        display: none;
+      }
+
+      .additional-content,
+      .add-icon.additional {
+        display: block;
+      }
+    }
+
+    /* Estilo para os títulos e ícones */
+    .default-content {
+      display: flex;
+      justify-content: center; /* Centraliza horizontalmente */
+      align-items: center; /* Centraliza verticalmente */
+      flex-direction: column; /* Organiza o ícone e título em coluna */
+      text-align: center; /* Alinha o texto do título */
+      gap: 1rem; /* Adiciona espaço entre ícone e título */
+      width: 100%;
+      height: 100%; /* Preenche toda a altura do card */
+    }
+
+    .icon-title {
+      font-size: 4rem; /* Tamanho do ícone aumentado */
+      color: #09a93f; /* Cor do ícone */
+    }
+
+    .default-title {
+      color: #09a93f;
+      font-size: 2.5rem;
+      font-weight: 700;
+      line-height: 130%;
+    }
+
+    .additional-content {
+      display: none;
+      color: #ffffff;
+      font-size: 1.6rem;
+      line-height: 1.5;
+    }
+
+    .content {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+
+    /* Apenas o conteúdo padrão está visível inicialmente */
+    .default-content {
+      display: block;
+    }
+
+    .additional-content {
+      display: none;
+    }
+
+    .card.active .additional-content {
+      display: block;
+    }
+
+    .card .default-content {
+      display: block;
+    }
+
+    .card.active .default-content {
+      display: none;
+    }
+
+    /* Ícones de Adição (+) e Subtração (-) */
+    .add-icon {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      font-size: 3rem;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .add-icon.default {
+      display: block;
+    }
+
+    .add-icon.additional {
+      display: block;
+      color: #ffffff; /* Cor branca para o ícone de subtração */
+    }
+
+    .card.active .add-icon.default {
+      display: none;
+    }
+
+    /* Ícone de subtração em branco quando o card estiver ativo */
+    .card.active .add-icon.additional {
+      display: block;
+      color: #ffffff; /* Cor branca para o ícone de subtração */
+      bottom: 10px; /* Mantém a mesma posição que o ícone de adição */
+      left: 10px; /* Mantém a mesma posição que o ícone de adição */
+    }
+  }
+}

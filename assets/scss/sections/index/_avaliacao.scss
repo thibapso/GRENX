@@ -1,0 +1,77 @@
+.avaliacao {
+  background-color: #ffffff;
+  font-family: $font;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    height: 85%;
+    padding: 5rem 0;
+    gap: 4rem;
+  }
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #096639;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 130%;
+    width: 55rem;
+  }
+
+  &__cards {
+    display: flex;
+    gap: 1.25rem;
+  }
+
+  &__iten {
+    background: $gradient-titulo;
+    color: #ffffff;
+    border-radius: 1rem;
+    width: 18.8rem;
+    height: 15.5rem;
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: flex-start;
+
+    img {
+      max-width: 80%;
+      height: auto;
+    }
+
+    h2 {
+      font-size: 1rem; /* Reduzido de 1.25rem */
+      font-weight: 700;
+      line-height: 130%;
+      width: 100%; /* Garante que ocupe todo o espaço do card */
+      max-width: 16rem; /* Aumenta o limite para evitar quebras */
+    }
+
+    article {
+      font-size: 0.8125rem;
+      font-weight: 400;
+      line-height: 140%;
+    }
+
+    p {
+      font-size: 1.125rem;
+      font-weight: 400;
+      line-height: 100%;
+      letter-spacing: 0.045rem;
+      text-align: left;
+    }
+  }
+}

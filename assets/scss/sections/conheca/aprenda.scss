@@ -1,0 +1,36 @@
+// Estilos específicos para a seção .aprenda
+.aprenda {
+  background: #f3f3f3;
+  font-family: $font;
+  padding: 2.85rem 0;
+  color: #096639;
+
+  &__content {
+    text-align: start; // Centraliza o texto dentro do conteúdo
+    width: 80%; // Define a largura do conteúdo da seção
+    margin: 0 auto; // Centraliza o conteúdo dentro da seção
+
+    h1 {
+      font-size: 2.25rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      padding: 1.5rem 0 3rem 0;
+    }
+
+    iframe {
+      width: 100%; // Faz o iframe ocupar toda a largura da seção
+      max-width: 100%; // Garante que o iframe não ultrapasse a largura da seção
+      height: 40rem; // Ajusta a altura do iframe proporcionalmente
+      border: 0; // Remove a borda do iframe
+      border-radius: 1.85rem;
+    }
+  }
+}
+
+// Garanta que o body também tenha fundo branco
+body {
+  background-color: #ffffff; // Define o fundo branco para toda a página
+  margin: 0; // Remove qualquer margem padrão do body
+  font-family: $font; // Certifique-se de que a fonte seja aplicada corretamente
+}
