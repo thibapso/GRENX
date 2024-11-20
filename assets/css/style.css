@@ -510,6 +510,15 @@ main .titulo__image img {
   color: #ffffff;
   font-size: 1.25rem;
   font-weight: 700;
+  transition: all 0.3s ease-in-out; /* Adiciona uma transição suave */
+}
+
+#comparar:hover {
+  background: #ffffff; /* Muda o fundo para branco */
+  color: #09a93f; /* Muda a cor do texto para verde */
+  border: 1px solid #09a93f; /* Mantém a borda verde */
+  box-shadow: 0px 4px 10px rgba(9, 169, 63, 0.4); /* Adiciona uma sombra */
+  cursor: pointer; /* Mostra o cursor como uma mão */
 }
 
 .conhecendo {
@@ -565,15 +574,18 @@ main .titulo__image img {
 }
 .conhecendo__data .number {
   color: #096639;
-  font-size: 2rem;
+  font-size: 2.75rem;
   font-weight: bold;
-  margin-left: 1rem;
   /* Espaço à esquerda do número */
 }
 .conhecendo__data .info {
-  color: #666666;
   font-size: 1rem;
-  font-weight: 400;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: capitalize;
+  margin-top: 0.5rem;
+  margin-left: 0.1rem;
 }
 .conhecendo__data i {
   font-size: 3rem;
@@ -726,6 +738,7 @@ main .titulo__image img {
 .missao .card.active {
   background-color: #09a93f;
   color: #ffffff;
+  line-height: 150%;
 }
 .missao .card.active .default-content,
 .missao .card.active .default-title,
@@ -757,10 +770,21 @@ main .titulo__image img {
   line-height: 130%;
 }
 .missao .card .additional-content {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribui os elementos com espaçamento */
+  align-items: center;
+  height: 100%;
   color: #ffffff;
-  font-size: 1.6rem;
-  line-height: 1.5;
+  line-height: 2.5;
+  text-align: center;
+  padding: 1rem;
+}
+.missao .card .texto-content {
+  margin-bottom: 3rem;
+  font-weight: 700;
+  line-height: 150%;
+  font-size: 1.25rem;
 }
 .missao .card .content {
   position: relative;

@@ -63,6 +63,7 @@
     &.active {
       background-color: #09a93f;
       color: #ffffff;
+      line-height: 150%;
 
       .default-content,
       .default-title,
@@ -101,10 +102,22 @@
     }
 
     .additional-content {
-      display: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; /* Distribui os elementos com espaçamento */
+      align-items: center;
+      height: 100%;
       color: #ffffff;
-      font-size: 1.6rem;
-      line-height: 1.5;
+      line-height: 2.5;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .texto-content {
+      margin-bottom: 3rem;
+      font-weight: 700;
+      line-height: 150%;
+      font-size: 1.25rem;
     }
 
     .content {

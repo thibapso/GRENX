@@ -56,16 +56,19 @@
 
     .number {
       color: #096639;
-      font-size: 2rem;
+      font-size: 2.75rem;
       font-weight: bold;
-      margin-left: 1rem;
       /* Espaço à esquerda do número */
     }
 
     .info {
-      color: #666666;
       font-size: 1rem;
-      font-weight: 400;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      text-transform: capitalize;
+      margin-top: 0.5rem;
+      margin-left: 0.1rem;
     }
 
     i {

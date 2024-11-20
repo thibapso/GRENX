@@ -51,8 +51,8 @@ document.getElementById("consumo").addEventListener("input", function () {
 
   // Se o campo estiver vazio, restaura os valores padrões do HTML
   if (!input) {
-    document.getElementById("preco-atual").textContent = "R$67,42";
-    document.getElementById("preco-nova").textContent = "R$61,42";
-    document.getElementById("economia").textContent = "Economizou: R$6,00";
+    document.getElementById("preco-atual").textContent = "R$0,00";
+    document.getElementById("preco-nova").textContent = "R$0,00";
+    document.getElementById("economia").textContent = "Economizou: R$0,00";
   }
 });

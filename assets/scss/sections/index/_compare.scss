@@ -172,4 +172,13 @@
   color: #ffffff;
   font-size: 1.25rem;
   font-weight: 700;
+  transition: all 0.3s ease-in-out; /* Adiciona uma transição suave */
+}
+
+#comparar:hover {
+  background: #ffffff; /* Muda o fundo para branco */
+  color: #09a93f; /* Muda a cor do texto para verde */
+  border: 1px solid #09a93f; /* Mantém a borda verde */
+  box-shadow: 0px 4px 10px rgba(9, 169, 63, 0.4); /* Adiciona uma sombra */
+  cursor: pointer; /* Mostra o cursor como uma mão */
 }
