@@ -1,42 +1,18 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const dropdown = document.querySelector(".dropdown");
-  const body = document.body;
-  const overlay = document.createElement("div"); // Criando o elemento de sobreposição
-  overlay.classList.add("overlay"); // Adiciona a classe para o estilo
-  body.appendChild(overlay); // Adiciona a sobreposição ao body
-
-  // Função para fechar o dropdown
-  const closeDropdown = () => {
-    dropdown.classList.remove("active");
-    overlay.style.display = "none"; // Esconde a sobreposição
-  };
-
-  // Função para abrir o dropdown
-  const openDropdown = () => {
-    dropdown.classList.add("active");
-    overlay.style.display = "block"; // Exibe a sobreposição
-  };
-
-  // Clique no dropdown (abre/fecha)
-  dropdown.addEventListener("click", (e) => {
-    e.preventDefault();
-    if (!dropdown.classList.contains("active")) {
-      openDropdown();
-    } else {
-      closeDropdown();
-    }
+document.addEventListener('DOMContentLoaded', function() {
+  // Captura os elementos do dropdown
+  const dropdown = document.querySelector('.dropdown');
+  const dropdownMenu = document.querySelector('.dropdown-menu');
+  
+  // Alternar a visibilidade do menu ao clicar no link
+  dropdown.querySelector('.dropdown-toggle').addEventListener('click', function(event) {
+    event.preventDefault(); // Impede o comportamento padrão do link
+    dropdown.classList.toggle('active');
   });
 
-  // Fechar o dropdown se clicar fora dele
-  document.addEventListener("click", (e) => {
-    if (!dropdown.contains(e.target) && !overlay.contains(e.target)) {
-      closeDropdown();
+  // Fechar o dropdown ao clicar fora
+  document.addEventListener('click', function(event) {
+    if (!dropdown.contains(event.target)) {
+      dropdown.classList.remove('active');
     }
-  });
-
-  // Clique na sobreposição para fechar
-  overlay.addEventListener("click", () => {
-    closeDropdown();
   });
 });
-
