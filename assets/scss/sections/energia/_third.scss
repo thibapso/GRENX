@@ -1,5 +1,5 @@
 .third {
-  color: #096639; /* Cor do texto verde */
+  color: #096639;
   font-family: $font;
   background-color: #ffffff;
   display: flex;
@@ -14,27 +14,64 @@
     justify-content: space-around;
     padding-top: 3rem;
     width: 80%;
-    padding-bottom: 10rem;
+    padding-bottom: 0;
 
     h2 {
       font-size: 3rem;
-      font-style: normal;
       font-weight: 700;
-      line-height: 5rem; /* 166.667% */
+      line-height: 5rem;
       text-transform: capitalize;
       padding-bottom: 1.5rem;
       text-align: center;
-      width: 60rem;
-      margin: 2rem 0  ;
+      max-width: 60rem;
+      margin: 2rem 0;
     }
 
     article {
       text-align: center;
       font-size: 1.5rem;
-      width: 60rem;
-      font-style: normal;
-      line-height: 200%;
+      max-width: 60rem;
+      line-height: 2;
       letter-spacing: 0.03rem;
+      padding: 0 1rem;
+    }
+  }
+
+  // Responsividade
+  @media (max-width: 1024px) {
+    &__content {
+      h2 {
+        font-size: 2.5rem;
+        line-height: 4rem;
+      }
+      article {
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__content {
+      h2 {
+        font-size: 2rem;
+        line-height: 3rem;
+      }
+      article {
+        font-size: 1.2rem;
+        max-width: 90%;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    &__content {
+      h2 {
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+      }
+      article {
+        font-size: 1rem;
+      }
     }
   }
 }

@@ -16,8 +16,13 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     gap: 2rem;
 
+    // Centralizar a imagem no contêiner
     img {
       margin-top: -2.6rem;
+      max-width: 100%; // Garante que a imagem não ultrapasse o tamanho do contêiner
+      display: block; // Remove qualquer comportamento de inline
+      margin-left: auto;
+      margin-right: auto;
     }
 
     hr {
@@ -56,15 +61,59 @@
       }
     }
   }
-}
 
-@media (max-width: 768px) {
-  .economize__content {
-    flex-direction: column;
-    align-items: center;
+  // Media Query para telas menores que 768px (layout horizontal e fonte menor)
+  @media (max-width: 768px) {
+    .economize__content {
+      flex-direction: row; // Exibe os itens em linha (horizontal) em vez de coluna
+      align-items: flex-start; // Alinha os itens no topo
+      gap: 1rem; // Menor espaço entre os itens
+    }
+
+    article {
+      font-size: 1rem; // Reduz o tamanho da fonte para não vazar
+      width: auto; // Ajusta a largura para caber melhor no layout
+    }
+
+    .economize__link {
+      width: 100%; // Deixa o botão ocupar toda a largura disponível
+      padding: 0.75rem 1rem; // Ajusta o tamanho do botão para telas menores
+    }
+
+    img {
+      max-width: 50%; // Limita a largura da imagem para não ficar muito grande
+      margin-top: 0; // Remove a margem superior extra
+      margin-left: auto; // Centraliza a imagem horizontalmente
+      margin-right: auto; // Centraliza a imagem horizontalmente
+    }
+
+    hr {
+      display: none; // Esconde o <hr> em telas menores que 768px
+    }
   }
 
-  .economize__link {
-    width: 100%; // Deixa o botão ocupar toda a largura disponível
+  // Media Query para telas menores que 480px (disposição e ajustes ainda mais responsivos)
+  @media (max-width: 550px) {
+    .economize__content {
+      flex-direction: column; // Coloca os itens em coluna em telas ainda menores
+      gap: 1rem; // Menor espaço entre os itens
+    }
+
+    article {
+      font-size: 0.9rem; // Reduz ainda mais o tamanho da fonte para telas pequenas
+    }
+
+    img {
+      max-width: 80%; // Ajusta o tamanho da imagem para caber melhor
+    }
+
+    .economize__link {
+      width: auto; // Não ocupa toda a largura
+      padding: 0.65rem 1rem; // Ajusta o botão para caber melhor
+    }
+
+    hr {
+      display: none; // Esconde o <hr> em telas menores que 480px também
+    }
   }
 }

@@ -1,6 +1,5 @@
 .vantagens {
   background: #f3f3f3;
-  /* Cor de fundo */
   font-family: $font;
   display: flex;
   justify-content: center;
@@ -20,17 +19,14 @@
   &__veja {
     color: #09a93f;
     font-size: 1rem;
-    font-style: normal;
     font-weight: 700;
-    line-height: normal;
-    letter-spacing: 0.1rem;
     text-transform: uppercase;
+    letter-spacing: 0.1rem;
   }
 
   &__title {
     color: #096639;
     font-size: 3.75rem;
-    font-style: normal;
     font-weight: 700;
     line-height: 5rem;
     text-transform: capitalize;
@@ -38,31 +34,22 @@
 
   &__iten {
     display: flex;
-    /* Organiza os itens na vertical */
     align-items: flex-start;
-    /* Alinha os itens à esquerda */
     text-align: left;
-    /* Garante que o texto fique alinhado à esquerda */
     gap: 1rem;
-    /* Espaçamento entre os elementos */
     margin: 4rem 0;
-    /* Espaçamento inferior para separar os itens */
   }
 
   &__iten img {
     width: 100px;
-    /* Tamanho fixo para a imagem */
     height: auto;
     margin-bottom: 1rem;
-    /* Espaçamento entre a imagem e o título */
   }
 
   &__iten h2 {
     font-size: 1.625rem;
-    font-style: normal;
     font-weight: 700;
     line-height: 2.375rem;
-    /* 146.154% */
     color: #09a93f;
   }
 
@@ -70,9 +57,96 @@
     width: 28rem;
     color: #666;
     font-size: 1.125rem;
-    font-style: normal;
     font-weight: 400;
     line-height: 2rem;
-    /* 177.778% */
+  }
+
+  // Responsividade para telas de até 1200px
+  @media (max-width: 1200px) {
+    &__content {
+      gap: 6rem; // Reduz o espaçamento entre os blocos
+      flex-wrap: wrap; // Permite que os elementos fiquem em várias linhas
+      justify-content: center;
+    }
+
+    &__iten {
+      margin: 2rem 0; // Reduz o espaçamento entre os itens
+    }
+
+    &__iten article {
+      width: 100%; // Ocupa toda a largura disponível
+    }
+
+    &__title {
+      font-size: 3rem; // Reduz o tamanho do título
+      line-height: 4rem;
+      text-align: center; // Centraliza o texto
+    }
+
+    &__veja {
+      text-align: center; // Centraliza o subtítulo
+    }
+
+    // Centraliza a imagem da nova div em dispositivos menores que 1200px
+    .vantagens__content div img {
+      max-width: 100%;  // Garante que a imagem se ajuste ao tamanho do contêiner
+      display: block;   // Garante que a imagem seja tratada como um bloco
+      margin-left: auto;  // Centraliza a imagem horizontalmente
+      margin-right: auto; // Centraliza a imagem horizontalmente
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 3rem 1rem;
+
+    &__content {
+      flex-direction: column; // Empilha os elementos
+      gap: 2rem; // Espaçamento menor entre os blocos
+    }
+
+    &__title {
+      font-size: 2.5rem; // Ajusta o tamanho do título
+      line-height: 3.5rem;
+    }
+
+    &__iten {
+      flex-direction: column; // Reorganiza os itens verticalmente
+      align-items: center; // Centraliza os itens
+      text-align: center; // Centraliza o texto
+    }
+
+    &__iten img {
+      width: 80px; // Reduz o tamanho das imagens
+    }
+
+    &__iten article {
+      font-size: 1rem; // Reduz o tamanho do texto
+      line-height: 1.5rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 2rem 1rem;
+
+    &__title {
+      font-size: 2rem; // Reduz o tamanho do título ainda mais
+      line-height: 2.5rem;
+    }
+
+    &__iten {
+      margin: 1.5rem 0; // Espaçamento menor entre os itens
+    }
+
+    &__iten img {
+      width: 60px; // Reduz ainda mais as imagens
+    }
+
+    &__iten h2 {
+      font-size: 1.25rem; // Ajusta o tamanho do subtítulo
+    }
+
+    &__iten article {
+      font-size: 0.875rem; // Reduz o tamanho do texto
+    }
   }
 }

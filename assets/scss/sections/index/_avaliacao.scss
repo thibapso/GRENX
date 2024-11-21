@@ -31,6 +31,8 @@
   &__cards {
     display: flex;
     gap: 1.25rem;
+    flex-wrap: wrap; // Permite que os cards se organizem em múltiplas linhas em telas menores
+    justify-content: center;
   }
 
   &__iten {
@@ -53,11 +55,11 @@
     }
 
     h2 {
-      font-size: 1rem; /* Reduzido de 1.25rem */
+      font-size: 1rem;
       font-weight: 700;
       line-height: 130%;
-      width: 100%; /* Garante que ocupe todo o espaço do card */
-      max-width: 16rem; /* Aumenta o limite para evitar quebras */
+      width: 100%;
+      max-width: 16rem;
     }
 
     article {
@@ -72,6 +74,65 @@
       line-height: 100%;
       letter-spacing: 0.045rem;
       text-align: left;
+    }
+  }
+
+  // Responsividade
+  @media (max-width: 1200px) {
+    &__title {
+      font-size: 3rem; // Reduz o tamanho do título
+      width: 45rem; // Ajusta a largura
+    }
+
+    &__iten {
+      width: 16rem; // Reduz a largura dos cards
+      height: 14rem; // Ajusta a altura dos cards
+    }
+
+    &__content {
+      gap: 3rem; // Diminui o espaçamento entre os elementos
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__title {
+      font-size: 2.5rem; // Reduz ainda mais o tamanho do título
+      width: 35rem; // Ajusta a largura
+    }
+
+    &__iten {
+      width: 14rem; // Reduz ainda mais os cards
+      height: 12rem; // Ajusta a altura
+      padding: 1.5rem; // Ajusta o padding
+    }
+
+    &__content {
+      gap: 2rem; // Menor espaçamento
+    }
+
+    &__cards {
+      gap: 1rem; // Reduz o espaçamento entre os cards
+    }
+  }
+
+  @media (max-width: 480px) {
+    &__title {
+      font-size: 2rem; // Tamanho do título menor para celulares
+      width: 100%; // Ajusta para ocupar toda a largura
+    }
+
+    &__iten {
+      width: 100%; // Cards ocupam toda a largura
+      height: auto; // Altura automática
+      padding: 1rem; // Menor padding
+    }
+
+    &__content {
+      gap: 1.5rem; // Ajusta o espaçamento geral
+    }
+
+    &__cards {
+      gap: 0.75rem; // Espaçamento mínimo entre cards
     }
   }
 }

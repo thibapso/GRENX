@@ -101,7 +101,7 @@ header {
         text-decoration: none;
         color: #ffffff;
         padding: 0.65rem 1.25rem;
-        display: inline-block; 
+        display: inline-block;
       }
 
       /* Garantir que 'Sobre' tenha o fundo verde escuro quando o dropdown está aberto */
@@ -171,4 +171,53 @@ header {
 /* Estilo de hover para os itens do dropdown */
 .dropdown .dropdown-menu li a:hover {
   background-color: #096639;
+}
+
+/* Configuração inicial para o menu */
+.menu {
+  display: flex;
+  gap: 1rem;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Estilo para telas menores */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    position: absolute;
+    top: 5rem;
+    right: 0;
+    background-color: var(--Color-2, #096639);
+    width: 100%;
+    z-index: 999;
+    padding: 1rem 0;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .menu div {
+    text-align: center;
+  }
+
+  .menu a {
+    padding: 0.75rem;
+    display: block;
+    color: #fff;
+  }
 }

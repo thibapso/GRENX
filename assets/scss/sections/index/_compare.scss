@@ -124,7 +124,7 @@
     background-color: #f3f3f3;
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0;
   }
 
   &__retangulo {
@@ -154,6 +154,122 @@
     left: 50%; // Centraliza o triângulo horizontalmente em relação ao card
     transform: translateX(-50%); // Garantir que ele esteja centralizado
     width: 50px; // Aumentei o tamanho para 60px, ajuste conforme necessário
+  }
+
+  // Responsividade para telas menores
+
+  @media (max-width: 1200px) {
+    .compare__cards {
+      flex-direction: column;
+      gap: 3rem; // Ajuste do espaçamento entre os cartões
+    }
+
+    .compare__main {
+      width: 24rem; // Reduz a largura dos cartões
+      height: auto; // Permite altura automática
+    }
+
+    .compare__atual,
+    .compare__nova {
+      width: 100%; // Os cartões ocupam toda a largura disponível
+      max-width: 20rem; // Define uma largura máxima
+    }
+  }
+
+  @media (max-width: 768px) {
+    .compare {
+      padding: 2rem 1rem; // Reduz o espaçamento geral
+      text-align: center; // Alinha o texto ao centro para telas menores
+    }
+
+    .compare__title {
+      font-size: 2rem;
+      line-height: 3rem; // Ajusta o tamanho e o espaçamento da linha do título
+    }
+
+    .compare__content {
+      width: 100%; // Ocupa toda a largura
+    }
+
+    .compare__empresa {
+      flex-direction: column; // Empilha os cartões verticalmente
+      gap: 2rem;
+    }
+
+    .compare__main {
+      width: 90%; // Ajusta o tamanho do card principal
+      max-width: 22rem; // Limita o tamanho máximo
+    }
+
+    .compare__input input {
+      max-width: 100%; /* Input ocupa toda a largura disponível */
+    }
+
+    button {
+      width: 100%; /* Botão ocupa toda a largura */
+      padding: 1rem;
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .compare {
+      padding: 1.5rem 1rem; // Reduz o espaçamento geral
+      text-align: center; // Alinha o texto ao centro para telas menores
+
+      &__texto-main {
+        background-color: #f3f3f3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+        font-size: 0.85rem;
+        width: 10rem;
+      }
+
+      &__retangulo {
+        display: none;
+      }
+    }
+
+    .compare__title {
+      font-size: 1.5rem; /* Tamanho da fonte menor */
+      line-height: 2rem; // Ajusta o espaçamento do título para telas pequenas
+    }
+
+    .compare__content {
+      width: 90%; // Reduz a largura para 90% da tela
+    }
+
+    .compare__empresa {
+      flex-direction: column; // Empilha os cartões verticalmente
+      gap: 1.5rem; // Reduz o espaçamento entre os cartões
+    }
+
+    .compare__main {
+      width: 20rem; /* Reduz ainda mais a largura dos cards para 20rem */
+      padding: 1.5rem; /* Ajusta o preenchimento interno */
+    }
+
+    .compare__atual,
+    .compare__nova {
+      width: 90%; // Ajusta a largura para 90% dos cartões
+      max-width: 16rem; // Limita a largura máxima dos cards
+    }
+
+    #comparar {
+      width: 100%; /* Botão ocupa toda a largura */
+      height: 2.5rem; /* Menor altura do botão */
+      font-size: 0.875rem; /* Texto menor no botão */
+      padding: 0.5rem; /* Ajusta o preenchimento */
+    }
+
+    /* Redução nos preços */
+    #preco-atual,
+    #preco-nova {
+      font-size: 1.25rem; /* Reduz preço para 1.25rem */
+    }
   }
 }
 

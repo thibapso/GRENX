@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+.table__content {
+  background-color: #ffffff;
+  margin-bottom: 2rem;
+}
+
+.table-container {
+  margin: 0 auto;
+  max-width: 1200px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  width: 100%; /* Garantir que ocupe 100% da largura disponível */
+}
+
+.table-container {
+  overflow-x: auto;
+  margin: 0 auto;
+  max-width: 1200px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+}
+
+thead {
+  background-color: #4aab31; // Fundo verde
+  color: #fff;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left; // Alinha os textos à esquerda
+  border: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+th {
+  font-size: 1rem;
+  font-weight: 600; // Poppins peso médio para cabeçalhos
+  text-align: left; // Alinha cabeçalhos à esquerda
+}
+
+td {
+  font-size: 0.9rem;
+  font-weight: 400; // Poppins peso padrão para conteúdo
+  text-align: left; // Alinha conteúdo à esquerda
+}
+
+// Estilo para as células "Critério", "ACR" e "ACL"
+th:first-child,
+td:first-child {
+  background-color: #4aab31;
+  color: white;
+  font-weight: bold;
+}
+
+// Linha divisória no meio (Desktop)
+td {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1px;
+    height: 100%;
+    background-color: #ddd;
+    transform: translateX(-50%);
+  }
+}
+
+// Estilos específicos para Desktop
+@media (min-width: 769px) {
+  table {
+    border-spacing: 0;
+    border-collapse: collapse;
+  }
+
+  td {
+    position: relative;
+
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 1px;
+      height: 100%;
+      background-color: #ddd;
+      transform: translateX(-50%);
+    }
+
+    &:first-child::after,
+    &:last-child::after {
+      display: none;
+    }
+
+    &:nth-child(2)::after {
+      display: none;
+    }
+  }
+
+  td:first-child,
+  td:nth-child(2),
+  td:nth-child(3) {
+    background-color: transparent; // Remove o fundo verde no desktop
+    color: #333;
+  }
+
+  th,
+  td {
+    font-size: 1rem;
+    padding: 15px;
+    text-align: left; // Alinha texto à esquerda no desktop
+  }
+
+  td {
+    width: 33%;
+  }
+}
+
+// Responsividade para telas menores
+@media (max-width: 768px) {
+  table {
+    display: block;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tbody,
+  tr,
+  td {
+    display: block;
+    width: 100%;
+  }
+
+  tr {
+    margin-bottom: 10px;
+  }
+
+  td {
+    text-align: left; // Alinha o texto à esquerda no mobile
+    padding-left: 50%;
+    position: relative;
+
+    // Remove linha divisória no mobile
+    &::after {
+      display: none;
+    }
+
+    &::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 10px;
+      width: 45%;
+      text-align: left;
+      font-weight: bold;
+      color: #4aab31; // Verde para os rótulos no mobile
+    }
+
+    &[data-label="Definição"],
+    &[data-label="Acesso"] {
+      background-color: #4aab31; // Fundo verde
+      color: white; // Texto branco
+      font-weight: bold;
+    }
+  }
+}

@@ -1,17 +1,16 @@
-// Estilos específicos para a seção .blog
 .blog {
   background: #f3f3f3;
   font-family: $font;
-  padding: 3rem 0; // Alterado para valor inteiro
+  padding: 3rem 0;
   color: #096639;
 
   &__content {
-    text-align: start; // Alinha o texto à esquerda
-    width: 80%; // Define a largura do conteúdo da seção
-    margin: 0 auto; // Centraliza o conteúdo dentro da seção
+    text-align: start;
+    width: 80%;
+    margin: 0 auto;
 
     h2 {
-      font-size: 2.25rem; // Mantido o valor já arredondado
+      font-size: 2.25rem;
       font-style: normal;
       font-weight: 700;
       line-height: normal;
@@ -20,48 +19,41 @@
 
     .blog__cards {
       display: flex;
-      justify-content: space-between; // Espaço entre os cards
-      gap: 2rem; // Espaçamento entre os cards
-      flex-wrap: wrap; // Permite que os cards quebrem linha quando necessário
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin: 0 auto; /* Centraliza horizontalmente */
+      max-width: 1200px; /* Largura máxima do contêiner */
 
       div {
-        width: 22%; // Mantido valor para os cards
+        width: 22%;  // Para telas grandes
 
         img {
-          width: 100%; // Faz a imagem ocupar toda a largura do card
-          height: auto; // Mantém a proporção da imagem
-          border-radius: 0.5rem; // Arredonda os cantos da imagem
+          width: 100%;
+          height: auto;
+          border-radius: 0.5rem;
         }
 
         h3 {
-          margin-top: 1rem; // Espaçamento entre a imagem e o título
-          font-size: 1rem; // Arredondado para inteiro
-          font-style: normal;
+          margin-top: 1rem;
+          font-size: 1rem;
           font-weight: 700;
-          line-height: 1.5rem; // Arredondado para .5
-          text-decoration-line: underline;
-          text-decoration-style: solid;
-          text-decoration-skip-ink: none;
-          text-decoration-thickness: auto;
-          text-underline-offset: auto;
-          text-underline-position: from-font;
-          margin-bottom: 0.5rem; // Adicionando espaço após o título
+          line-height: 1.5rem;
+          text-decoration: underline;
+          margin-bottom: 0.5rem;
         }
 
         article {
-          margin-top: 0.5rem; // Espaçamento entre o título e o texto
-          font-size: 1rem; // Arredondado para inteiro
-          line-height: 1.5rem; // Arredondado para .5
-          font-style: normal;
-          font-weight: 400;
-          margin-bottom: 0.5rem; // Adicionando espaço após o texto do artigo
+          margin-top: 0.5rem;
+          font-size: 1rem;
+          line-height: 1.5rem;
+          margin-bottom: 0.5rem;
         }
 
         p {
-          font-size: 1rem; // Arredondado para inteiro
-          font-style: normal;
+          font-size: 1rem;
           font-weight: 700;
-          line-height: 1.5rem; // Arredondado para .5
+          line-height: 1.5rem;
         }
       }
     }
@@ -72,5 +64,35 @@
       gap: 0.85rem;
     }
   }
+
+  // Media Query para telas entre 1000px e 660px (2 blogs por linha)
+  @media (max-width: 1000px) and (min-width: 661px) {
+    .blog__cards {
+      justify-content: center; /* Alinha os itens centralizados horizontalmente */
+      gap: 1.5rem; /* Ajusta o espaçamento entre os cards */
+    }
+
+    .blog__cards div {
+      width: 48%;  // Exibe dois itens por linha entre 1000px e 660px
+    }
+  }
+
+  // Media Query para telas menores que 650px (2 blogs por linha)
+  @media (max-width: 650px) {
+    .blog__cards {
+      justify-content: center; /* Centraliza os itens horizontalmente */
+      gap: 1.5rem; /* Espaçamento entre os cards */
+    }
+
+    .blog__cards div {
+      width: 48%;  // Exibe dois itens por linha em telas de 650px
+    }
+  }
+
+  // Media Query para telas menores que 400px (1 blog por linha)
+  @media (max-width: 400px) {
+    .blog__cards div {
+      width: 100%;  // Exibe um item por linha em telas de 400px
+    }
+  }
 }
-  

@@ -37,20 +37,27 @@
       font-weight: 400;
       line-height: 2rem;
       width: 37.0625rem;
-      height: 8.375rem;
+      height: auto; // Permite altura automática
+    }
+
+    // Estilo da imagem
+    img {
+      max-width: 100%;  // Torna a imagem responsiva
+      height: auto;     // Mantém a proporção da imagem
+      display: block;   // Garante que a imagem seja tratada como um bloco
+      margin-left: auto; // Centraliza a imagem dentro do contêiner
+      margin-right: auto; // Centraliza a imagem dentro do contêiner
     }
   }
 
   &__data {
     display: flex;
     gap: 2rem;
-    /* Espaçamento entre os itens */
 
     .conhecendo__iten {
       display: flex;
       flex-direction: column;
       align-items: center;
-      /* Centraliza os itens dentro de cada div */
       justify-content: center;
     }
 
@@ -58,7 +65,6 @@
       color: #096639;
       font-size: 2.75rem;
       font-weight: bold;
-      /* Espaço à esquerda do número */
     }
 
     .info {
@@ -78,15 +84,94 @@
       background-color: #09a93f;
       border-radius: 50%;
       display: inline-block;
-      /* Garante que o ícone fique alinhado ao lado do número */
     }
 
     .conhecendo__principal {
       display: flex;
       align-items: center;
-      /* Alinha verticalmente o ícone e o número */
       gap: 1rem;
-      /* Espaçamento entre o ícone e o número */
+    }
+  }
+
+  // Responsividade
+  @media (max-width: 1200px) {
+    &__content {
+      flex-direction: column;
+      gap: 3rem;
+
+      h2 {
+        font-size: 3rem;
+        line-height: 4rem;
+        text-align: center; // Centraliza o texto
+      }
+
+      article {
+        width: 100%; // Ocupa toda a largura
+        text-align: center;
+      }
+    }
+
+    &__data {
+      flex-wrap: wrap; // Permite que os itens fiquem em várias linhas
+      justify-content: center; // Centraliza os itens
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__content {
+      gap: 2rem;
+
+      p {
+        font-size: 0.875rem; // Reduz o tamanho do texto
+      }
+
+      h2 {
+        font-size: 2.5rem;
+        line-height: 3.5rem;
+      }
+    }
+
+    &__data .number {
+      font-size: 2rem; // Reduz o tamanho dos números
+    }
+
+    &__data i {
+      font-size: 2.5rem; // Ajusta o tamanho do ícone
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 2rem 1rem;
+
+    &__content {
+      width: 100%;
+      gap: 1rem;
+
+      h2 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+      }
+
+      article {
+        font-size: 1rem; // Reduz o tamanho do texto
+        line-height: 1.5rem;
+      }
+    }
+
+    &__data {
+      gap: 1rem;
+
+      .conhecendo__iten {
+        gap: 0.5rem; // Reduz o espaçamento entre os itens
+      }
+
+      .number {
+        font-size: 1.5rem; // Reduz o tamanho dos números
+      }
+
+      i {
+        font-size: 2rem; // Reduz o tamanho do ícone
+      }
     }
   }
 }

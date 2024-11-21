@@ -180,4 +180,65 @@
       left: 10px; /* Mantém a mesma posição que o ícone de adição */
     }
   }
+
+  // Responsividade
+  @media (max-width: 1200px) {
+    h2 {
+      font-size: 3rem; /* Diminui o tamanho do título */
+      line-height: 4rem;
+    }
+
+    .missao__cards {
+      flex-direction: column;
+      align-items: center; /* Centraliza os cards na coluna */
+    }
+
+    .card {
+      width: 80%; /* Faz os cards ocuparem mais espaço na tela menor */
+      margin: 1rem 0; /* Ajusta o espaçamento entre os cards */
+    }
+  }
+
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 2.5rem; /* Reduz ainda mais o tamanho do título */
+      line-height: 3.5rem;
+    }
+
+    .missao__cards {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .card {
+      width: 90%; /* Faz os cards ocuparem ainda mais a tela */
+    }
+
+    .card .default-title {
+      font-size: 2rem; /* Diminui o tamanho do título nos cards */
+    }
+
+    .card .texto-content {
+      font-size: 1rem; /* Diminui o tamanho do texto dentro dos cards */
+    }
+  }
+
+  @media (max-width: 480px) {
+    h2 {
+      font-size: 2rem; /* Título menor em telas muito pequenas */
+      line-height: 2.5rem;
+    }
+
+    .card {
+      width: 100%; /* Faz os cards ocuparem toda a largura disponível */
+    }
+
+    .card .default-title {
+      font-size: 1.75rem; /* Tamanho do título dos cards reduzido */
+    }
+
+    .card .texto-content {
+      font-size: 0.875rem; /* Tamanho do texto dos cards ajustado */
+    }
+  }
 }
