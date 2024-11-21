@@ -86,7 +86,7 @@
 
     &__iten {
       width: 16rem; // Reduz a largura dos cards
-      height: 14rem; // Ajusta a altura dos cards
+      height: 15rem;
     }
 
     &__content {
@@ -96,14 +96,14 @@
 
   @media (max-width: 768px) {
     &__title {
-      font-size: 2.5rem; // Reduz ainda mais o tamanho do título
-      width: 35rem; // Ajusta a largura
+      font-size: 2rem;
+      width: 29rem;
     }
 
     &__iten {
-      width: 14rem; // Reduz ainda mais os cards
-      height: 12rem; // Ajusta a altura
-      padding: 1.5rem; // Ajusta o padding
+      width: 19rem;
+      height: 15rem;
+      padding: 1.5rem;
     }
 
     &__content {

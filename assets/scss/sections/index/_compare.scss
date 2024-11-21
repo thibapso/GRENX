@@ -73,6 +73,7 @@
     h2 {
       font-size: 1.5rem;
       font-weight: 700;
+      text-align: center;
     }
   }
 
@@ -92,6 +93,7 @@
     h2 {
       font-size: 1.5rem;
       font-weight: 700;
+      text-align: center;
     }
   }
 
@@ -125,6 +127,7 @@
     display: flex;
     align-items: center;
     gap: 0;
+    justify-content: center;
   }
 
   &__retangulo {
@@ -132,12 +135,14 @@
     width: 1rem;
     height: 10rem;
     background-color: #f7aa06;
+    margin-right: 1rem;
   }
 
   &__where {
     font-weight: 700;
     color: #096639;
     margin: 1rem 0;
+    width: 21rem;
   }
 
   article {
@@ -185,6 +190,8 @@
     .compare__title {
       font-size: 2rem;
       line-height: 3rem; // Ajusta o tamanho e o espaçamento da linha do título
+      text-align: center;
+      width: 25rem;
     }
 
     .compare__content {
@@ -258,6 +265,13 @@
       max-width: 16rem; // Limita a largura máxima dos cards
     }
 
+    article {
+      line-height: 2rem;
+      font-size: 1rem;
+      color: #096639;
+      width: 20rem;
+    }
+
     #comparar {
       width: 100%; /* Botão ocupa toda a largura */
       height: 2.5rem; /* Menor altura do botão */
@@ -269,6 +283,74 @@
     #preco-atual,
     #preco-nova {
       font-size: 1.25rem; /* Reduz preço para 1.25rem */
+    }
+  }
+
+  @media (max-width: 400px) {
+    .compare {
+      padding: 1.5rem 0.5rem; // Ajuste do espaçamento geral
+    }
+
+    .compare__title {
+      font-size: 1.25rem; // Tamanho de fonte menor
+      line-height: 1.8rem; // Ajuste de altura da linha
+      width: 20rem;
+    }
+
+    .compare__content {
+      width: 90%; // Reduz a largura do conteúdo
+    }
+
+    .compare__cards {
+      flex-direction: column; // Empilha os cartões em telas menores
+      gap: 1.5rem; // Ajusta o espaçamento
+    }
+
+    .compare__empresa {
+      flex-direction: column; // Alinha verticalmente os elementos
+      gap: 2rem;
+    }
+
+    .compare__main {
+      width: 16rem; // Reduz a largura do card principal
+      height: auto; // Permite altura automática para ajuste de conteúdo
+      padding: 1rem; // Ajuste do padding interno
+    }
+
+    .compare__where {
+      width: 15rem;
+    }
+
+    article {
+      line-height: 2rem;
+      font-size: 1rem;
+      color: #096639;
+      width: 15rem;
+    }
+
+    .compare__atual,
+    .compare__nova {
+      width: 100%; // Os cartões ocupam toda a largura disponível
+      max-width: 14rem; // Limita a largura máxima
+      padding: 1rem; // Ajuste de padding interno
+      margin-right: 4rem;
+    }
+
+    .compare__atual h2,
+    .compare__nova h2 {
+      font-size: 1.25rem; // Tamanho da fonte dos títulos dentro dos cards
+    }
+
+    #comparar {
+      width: 100%; // Botão ocupa toda a largura
+      height: 2.5rem; // Ajuste na altura do botão
+      font-size: 1rem; // Tamanho de fonte do botão
+      padding: 0.5rem; // Ajuste no padding do botão
+    }
+
+    #preco-atual,
+    #preco-nova {
+      font-size: 1rem; // Tamanho de fonte menor para preços
     }
   }
 }
