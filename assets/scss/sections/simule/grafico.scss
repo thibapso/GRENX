@@ -1,56 +1,80 @@
 .grafico {
-  background: #f3f3f3; // Fundo da seção
+  background: #f3f3f3;
   font-family: $font;
-  padding: 3rem 0; // Espaçamento da seção
+  padding: 3rem 0;
   color: #096639;
 
   &__content {
     display: flex;
-    flex-direction: column; // Organiza os itens verticalmente
-    align-items: flex-start; // Alinha os itens à esquerda
-    justify-content: center; // Centraliza verticalmente se necessário
-    width: 80%; // Define a largura máxima
-    margin: 0 auto; // Centraliza horizontalmente o conteúdo
-    text-align: left; // Garante que o texto fique alinhado à esquerda
-    gap: 1.5rem; // Espaçamento entre os itens
+    flex-direction: column;
+    align-items: center; /* Alinha centralmente os itens */
+    justify-content: center;
+    width: 90%; /* Aumenta a largura em telas pequenas */
+    margin: 0 auto;
+    text-align: center; /* Alinha o texto centralmente */
+    gap: 1.5rem;
   }
 
   h1 {
-    font-size: 2.25rem; // Ajusta o tamanho do título
-    font-weight: 700; // Deixa o título em negrito
-    margin-bottom: 1rem; // Espaçamento inferior
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
   }
 
   h2 {
     font-size: 1.5rem;
-    font-style: normal;
     font-weight: 700;
-    line-height: 140%; /* 2.8875rem */
+    line-height: 140%;
   }
 
   p {
     font-size: 1rem;
-    line-height: 1.5; // Melhora a leitura
+    line-height: 1.5;
   }
 
   article {
     font-size: 1rem;
-    line-height: 1.8; // Melhora a leitura para blocos maiores de texto
+    line-height: 1.8;
   }
 }
 
 @media (max-width: 768px) {
   .grafico__content {
-    width: 90%; // Aumenta a largura em telas menores
-    padding: 1rem; // Reduz o espaçamento interno
+    width: 90%;
+    padding: 1rem;
   }
 
   h1 {
-    font-size: 1.5rem; // Ajusta o tamanho do título
+    font-size: 1.5rem;
   }
 
   p,
   article {
-    font-size: 0.9rem; // Reduz o tamanho do texto
+    font-size: 0.9rem;
   }
+}
+
+.grafico-tarifa-social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px 0;
+  padding: 20px;
+  background-color: #f4f4f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.grafico-tarifa-social h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.grafico-tarifa-social canvas {
+  max-width: 100%;
+  height: auto; /* Deixa o gráfico mais responsivo */
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 8px;
 }

@@ -289,7 +289,7 @@ footer .content .column--newsletter .newsletter .newsletter-btn:hover {
   color: #ffffff;
 }
 footer .content .content__icon {
-  font-size: 2rem;
+  font-size: 3rem;
   display: flex;
   gap: 1rem;
 }
@@ -328,27 +328,15 @@ footer .content .content__icon {
   }
 }
 @media (max-width: 480px) {
-  footer .content {
-    padding: 1rem;
-  }
-  footer .column--logo {
-    gap: 0.5rem;
-  }
-  footer .column--about h2,
-  footer .column--newsletter h2 {
-    font-size: 1rem;
-  }
-  footer .column--newsletter .newsletter-input {
+  footer .footer .content .column--newsletter .newsletter-input {
     width: 100%;
     margin-bottom: 0.5rem;
     border-radius: 12px;
   }
-  footer .column--newsletter .newsletter-btn {
+  footer .footer .content .column--newsletter .newsletter-btn {
     width: 100%;
     border-radius: 12px;
-  }
-  footer .column--newsletter .newsletter {
-    flex-direction: column;
+    font-size: 0.5rem; /* Reduzir o tamanho da fonte para telas menores */
   }
 }
 
@@ -409,6 +397,7 @@ main .titulo__button {
   justify-content: center;
   align-items: center;
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 main .titulo__button:hover {
   background: rgb(197.209486166, 135.7312252964, 4.790513834);
@@ -1794,11 +1783,11 @@ td::after {
 .grafico__content {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center; /* Alinha centralmente os itens */
   justify-content: center;
-  width: 80%;
+  width: 90%; /* Aumenta a largura em telas pequenas */
   margin: 0 auto;
-  text-align: left;
+  text-align: center; /* Alinha o texto centralmente */
   gap: 1.5rem;
 }
 .grafico h1 {
@@ -1808,9 +1797,8 @@ td::after {
 }
 .grafico h2 {
   font-size: 1.5rem;
-  font-style: normal;
   font-weight: 700;
-  line-height: 140%; /* 2.8875rem */
+  line-height: 140%;
 }
 .grafico p {
   font-size: 1rem;
@@ -1834,6 +1822,31 @@ td::after {
     font-size: 0.9rem;
   }
 }
+.grafico-tarifa-social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px 0;
+  padding: 20px;
+  background-color: #f4f4f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.grafico-tarifa-social h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.grafico-tarifa-social canvas {
+  max-width: 100%;
+  height: auto; /* Deixa o gráfico mais responsivo */
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
 .economize {
   background: #f3f3f3;
   font-family: "Poppins", "Calibri", "sans-serif";
