@@ -1804,6 +1804,11 @@ td::after {
   font-size: 1rem;
   line-height: 1.5;
 }
+.grafico__fonte {
+  font-weight: 800;
+  font-style: italic;
+  font-size: 2.5rem;
+}
 .grafico article {
   font-size: 1rem;
   line-height: 1.8;
