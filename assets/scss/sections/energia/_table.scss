@@ -12,7 +12,7 @@
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 10px;
-  width: 100%; /* Garantir que ocupe 100% da largura disponível */
+  width: 100%;
 }
 
 .table-container {
@@ -32,14 +32,14 @@ table {
 }
 
 thead {
-  background-color: #4aab31; // Fundo verde
+  background-color: #4aab31;
   color: #fff;
 }
 
 th,
 td {
   padding: 12px;
-  text-align: left; // Alinha os textos à esquerda
+  text-align: left;
   border: 1px solid #ddd;
 }
 
@@ -53,17 +53,16 @@ tbody tr:hover {
 
 th {
   font-size: 1rem;
-  font-weight: 600; // Poppins peso médio para cabeçalhos
-  text-align: left; // Alinha cabeçalhos à esquerda
+  font-weight: 600;
+  text-align: left;
 }
 
 td {
   font-size: 0.9rem;
-  font-weight: 400; // Poppins peso padrão para conteúdo
-  text-align: left; // Alinha conteúdo à esquerda
+  font-weight: 400;
+  text-align: left;
 }
 
-// Estilo para as células "Critério", "ACR" e "ACL"
 th:first-child,
 td:first-child {
   background-color: #4aab31;
@@ -71,7 +70,6 @@ td:first-child {
   font-weight: bold;
 }
 
-// Linha divisória no meio (Desktop)
 td {
   position: relative;
 
@@ -87,7 +85,6 @@ td {
   }
 }
 
-// Estilos específicos para Desktop
 @media (min-width: 769px) {
   table {
     border-spacing: 0;
@@ -122,7 +119,7 @@ td {
   td:first-child,
   td:nth-child(2),
   td:nth-child(3) {
-    background-color: transparent; // Remove o fundo verde no desktop
+    background-color: transparent;
     color: #333;
   }
 
@@ -130,7 +127,7 @@ td {
   td {
     font-size: 1rem;
     padding: 15px;
-    text-align: left; // Alinha texto à esquerda no desktop
+    text-align: left;
   }
 
   td {
@@ -138,7 +135,6 @@ td {
   }
 }
 
-// Responsividade para telas menores
 @media (max-width: 768px) {
   table {
     display: block;
@@ -160,11 +156,10 @@ td {
   }
 
   td {
-    text-align: left; // Alinha o texto à esquerda no mobile
+    text-align: left;
     padding-left: 50%;
     position: relative;
 
-    // Remove linha divisória no mobile
     &::after {
       display: none;
     }
@@ -176,13 +171,13 @@ td {
       width: 45%;
       text-align: left;
       font-weight: bold;
-      color: #4aab31; // Verde para os rótulos no mobile
+      color: #4aab31;
     }
 
     &[data-label="Definição"],
     &[data-label="Acesso"] {
-      background-color: #4aab31; // Fundo verde
-      color: white; // Texto branco
+      background-color: #4aab31;
+      color: white;
       font-weight: bold;
     }
   }

@@ -31,7 +31,7 @@
   &__cards {
     display: flex;
     gap: 1.25rem;
-    flex-wrap: wrap; // Permite que os cards se organizem em múltiplas linhas em telas menores
+    flex-wrap: wrap;
     justify-content: center;
   }
 
@@ -42,7 +42,6 @@
     width: 18.8rem;
     height: 15.5rem;
     padding: 2rem;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -77,20 +76,19 @@
     }
   }
 
-  // Responsividade
   @media (max-width: 1200px) {
     &__title {
-      font-size: 3rem; // Reduz o tamanho do título
-      width: 45rem; // Ajusta a largura
+      font-size: 3rem;
+      width: 45rem;
     }
 
     &__iten {
-      width: 16rem; // Reduz a largura dos cards
+      width: 16rem;
       height: 15rem;
     }
 
     &__content {
-      gap: 3rem; // Diminui o espaçamento entre os elementos
+      gap: 3rem;
     }
   }
 
@@ -107,32 +105,32 @@
     }
 
     &__content {
-      gap: 2rem; // Menor espaçamento
+      gap: 2rem;
     }
 
     &__cards {
-      gap: 1rem; // Reduz o espaçamento entre os cards
+      gap: 1rem;
     }
   }
 
   @media (max-width: 480px) {
     &__title {
-      font-size: 2rem; // Tamanho do título menor para celulares
-      width: 100%; // Ajusta para ocupar toda a largura
+      font-size: 2rem;
+      width: 100%;
     }
 
     &__iten {
-      width: 100%; // Cards ocupam toda a largura
-      height: auto; // Altura automática
-      padding: 1rem; // Menor padding
+      width: 100%;
+      height: auto;
+      padding: 1rem;
     }
 
     &__content {
-      gap: 1.5rem; // Ajusta o espaçamento geral
+      gap: 1.5rem;
     }
 
     &__cards {
-      gap: 0.75rem; // Espaçamento mínimo entre cards
+      gap: 0.75rem;
     }
   }
 }

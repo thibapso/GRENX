@@ -1,9 +1,9 @@
 main {
   background: $gradient-titulo;
-  padding-top: 4.5rem; /* Espaço para compensar o header fixo */
+  padding-top: 4.5rem;
 
   .titulo {
-    margin-top: 2rem; /* Adiciona espaço entre a navbar e o texto */
+    margin-top: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,7 +14,7 @@ main {
     color: #ffffff;
     gap: 2rem;
     position: relative;
-    height: 100vh; /* Mantém a altura total da seção */
+    height: 100vh;
     margin: 0 auto;
 
     &__info {
@@ -82,28 +82,27 @@ main {
     }
   }
 
-  /* Media Queries */
   @media (max-width: 1140px) {
     .titulo {
-      height: auto; /* Ajusta altura para conteúdo dinâmico */
+      height: auto;
       width: 90%;
       gap: 2rem;
 
       &__info {
-        position: static; /* Remove posicionamento absoluto */
+        position: static;
         margin-left: 0;
         align-items: center;
-        text-align: center; /* Centraliza texto */
+        text-align: center;
         gap: 2rem;
 
         h1 {
-          font-size: 3rem; /* Título menor */
+          font-size: 3rem;
         }
       }
 
       &__desc {
-        font-size: 1.5rem; /* Texto descritivo menor */
-        width: 100%; /* Texto ocupa toda a largura */
+        font-size: 1.5rem;
+        width: 100%;
       }
 
       &__button {
@@ -112,7 +111,7 @@ main {
       }
 
       &__image {
-        height: 70%; /* Ajusta altura da imagem */
+        height: 70%;
       }
     }
   }
@@ -120,7 +119,7 @@ main {
   @media (max-width: 768px) {
     .titulo {
       flex-direction: column;
-      align-items: center; /* Centraliza conteúdo */
+      align-items: center;
       gap: 1.5rem;
 
       &__info {
@@ -128,12 +127,12 @@ main {
         text-align: center;
 
         h1 {
-          font-size: 2.5rem; /* Reduz título ainda mais */
+          font-size: 2.5rem;
         }
       }
 
       &__desc {
-        font-size: 1.25rem; /* Texto mais compacto */
+        font-size: 1.25rem;
       }
 
       &__button {
@@ -141,7 +140,7 @@ main {
       }
 
       &__image {
-        height: 50%; /* Reduz ainda mais a altura da imagem */
+        height: 50%;
       }
     }
   }

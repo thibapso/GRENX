@@ -7,7 +7,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Estilo para a navbar */
 header {
   background: linear-gradient(90deg, rgb(74, 171, 49) 0%, rgb(207, 171, 17) 83%);
   font-family: "Poppins", "Calibri", "sans-serif";
@@ -39,9 +38,6 @@ header nav ul {
   display: flex;
   gap: 1rem;
   align-items: center;
-  /* Hover geral para todos os itens */
-  /* Garantir que 'Sobre' tenha o fundo verde escuro quando o dropdown está aberto */
-  /* Aplicando a mesma cor de fundo para 'Sobre' quando o dropdown estiver ativo */
 }
 header nav ul .nav-item {
   position: relative;
@@ -56,7 +52,6 @@ header nav ul .dropdown {
   align-items: center;
   padding: 0.3rem 0.75rem;
   font-size: 1.2rem;
-  /* Ícone rotaciona quando o menu está ativo */
 }
 header nav ul .dropdown .dropdown-toggle {
   text-decoration: none;
@@ -71,7 +66,7 @@ header nav ul .dropdown .dropdown-menu {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: var(--Color-2, #096639);
+  background-color: #096639;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -88,14 +83,14 @@ header nav ul .dropdown .dropdown-menu li a {
   text-decoration: none;
 }
 header nav ul .dropdown .dropdown-menu li a:hover {
-  background-color: var(--Color-3, #048c7f);
+  background-color: #048c7f;
 }
 header nav ul .dropdown.active i {
   transform: rotate(180deg);
 }
 header nav ul div:hover,
 header nav ul li:hover {
-  background: var(--Color-2, #096639);
+  background: #096639;
   border-radius: 3.25rem;
 }
 header nav ul a {
@@ -105,18 +100,17 @@ header nav ul a {
   display: inline-block;
 }
 header nav ul li.sobre.active, header nav ul li.sobre.active:hover {
-  background: var(--Color-3, #048c7f);
+  background: #048c7f;
   border-radius: 3.25rem;
 }
 header nav ul li.sobre:hover {
-  background: var(--Color-3, #048c7f);
+  background: #048c7f;
   border-radius: 3.25rem;
 }
 header nav ul .dropdown.active + .sobre {
-  background: var(--Color-3, #048c7f);
+  background: #048c7f;
 }
 
-/* Corrigir a área de hover */
 .nav-item {
   position: relative;
 }
@@ -133,7 +127,6 @@ header nav ul .dropdown.active + .sobre {
   padding: 0;
 }
 
-/* Quando o dropdown estiver ativo, o menu será visível */
 .dropdown-menu {
   display: none;
   position: absolute;
@@ -145,12 +138,10 @@ header nav ul .dropdown.active + .sobre {
   width: 180px;
 }
 
-/* Quando o dropdown estiver com a classe 'active', mostramos o menu */
 .dropdown.active .dropdown-menu {
   display: block;
 }
 
-/* Ajuste do hover nos itens do dropdown */
 .dropdown .dropdown-menu li a {
   padding: 0.5rem;
   display: block;
@@ -158,12 +149,10 @@ header nav ul .dropdown.active + .sobre {
   text-decoration: none;
 }
 
-/* Estilo de hover para os itens do dropdown */
 .dropdown .dropdown-menu li a:hover {
   background-color: #096639;
 }
 
-/* Configuração inicial para o menu */
 .menu {
   display: flex;
   gap: 1rem;
@@ -184,7 +173,6 @@ header nav ul .dropdown.active + .sobre {
     height: 3rem;
   }
 }
-/* Estilo para telas menores */
 @media (max-width: 768px) {
   .hamburger {
     display: block;
@@ -196,7 +184,7 @@ header nav ul .dropdown.active + .sobre {
     position: absolute;
     top: 5rem;
     right: 0;
-    background-color: var(--Color-2, #096639);
+    background-color: #096639;
     width: 100%;
     z-index: 999;
     padding: 1rem 0;
@@ -360,17 +348,16 @@ footer .content .content__icon i:hover {
   footer .footer .content .column--newsletter .newsletter-btn {
     width: 100%;
     border-radius: 12px;
-    font-size: 0.5rem; /* Reduzir o tamanho da fonte para telas menores */
+    font-size: 0.5rem;
   }
 }
 
 main {
   background: linear-gradient(90deg, rgb(74, 171, 49) 0%, rgb(207, 171, 17) 83%);
-  padding-top: 4.5rem; /* Espaço para compensar o header fixo */
-  /* Media Queries */
+  padding-top: 4.5rem;
 }
 main .titulo {
-  margin-top: 2rem; /* Adiciona espaço entre a navbar e o texto */
+  margin-top: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -381,7 +368,7 @@ main .titulo {
   color: #ffffff;
   gap: 2rem;
   position: relative;
-  height: 100vh; /* Mantém a altura total da seção */
+  height: 100vh;
   margin: 0 auto;
 }
 main .titulo__info {
@@ -444,36 +431,36 @@ main .titulo__image img {
 }
 @media (max-width: 1140px) {
   main .titulo {
-    height: auto; /* Ajusta altura para conteúdo dinâmico */
+    height: auto;
     width: 90%;
     gap: 2rem;
   }
   main .titulo__info {
-    position: static; /* Remove posicionamento absoluto */
+    position: static;
     margin-left: 0;
     align-items: center;
-    text-align: center; /* Centraliza texto */
+    text-align: center;
     gap: 2rem;
   }
   main .titulo__info h1 {
-    font-size: 3rem; /* Título menor */
+    font-size: 3rem;
   }
   main .titulo__desc {
-    font-size: 1.5rem; /* Texto descritivo menor */
-    width: 100%; /* Texto ocupa toda a largura */
+    font-size: 1.5rem;
+    width: 100%;
   }
   main .titulo__button {
     width: 16rem;
     font-size: 1rem;
   }
   main .titulo__image {
-    height: 70%; /* Ajusta altura da imagem */
+    height: 70%;
   }
 }
 @media (max-width: 768px) {
   main .titulo {
     flex-direction: column;
-    align-items: center; /* Centraliza conteúdo */
+    align-items: center;
     gap: 1.5rem;
   }
   main .titulo__info {
@@ -481,16 +468,16 @@ main .titulo__image img {
     text-align: center;
   }
   main .titulo__info h1 {
-    font-size: 2.5rem; /* Reduz título ainda mais */
+    font-size: 2.5rem;
   }
   main .titulo__desc {
-    font-size: 1.25rem; /* Texto mais compacto */
+    font-size: 1.25rem;
   }
   main .titulo__button {
     width: 14rem;
   }
   main .titulo__image {
-    height: 50%; /* Reduz ainda mais a altura da imagem */
+    height: 50%;
   }
 }
 
@@ -510,7 +497,7 @@ main .titulo__image img {
   font-size: 3rem;
   font-style: normal;
   font-weight: 700;
-  line-height: 5rem; /* 166.667% */
+  line-height: 5rem;
   text-transform: capitalize;
 }
 .compare__content {
@@ -602,7 +589,7 @@ main .titulo__image img {
 }
 .compare__main input[type=number]:focus {
   border: 2.5px solid #096639;
-  outline: none; /* Remove a borda padrão azul */
+  outline: none;
 }
 .compare__dado {
   background-color: #f3f3f3;
@@ -625,7 +612,7 @@ main .titulo__image img {
   width: 21rem;
 }
 .compare article {
-  line-height: 2rem; /* 200% */
+  line-height: 2rem;
   font-size: 1rem;
   color: #096639;
   width: 25rem;
@@ -675,18 +662,15 @@ main .titulo__image img {
     max-width: 22rem;
   }
   .compare .compare__input input {
-    max-width: 100%; /* Input ocupa toda a largura disponível */
+    max-width: 100%;
   }
   .compare button {
-    width: 100%; /* Botão ocupa toda a largura */
+    width: 100%;
     padding: 1rem;
     font-size: 1rem;
   }
 }
 @media (max-width: 480px) {
-  .compare {
-    /* Redução nos preços */
-  }
   .compare .compare {
     padding: 1.5rem 1rem;
     text-align: center;
@@ -705,7 +689,7 @@ main .titulo__image img {
     display: none;
   }
   .compare .compare__title {
-    font-size: 1.5rem; /* Tamanho da fonte menor */
+    font-size: 1.5rem;
     line-height: 2rem;
   }
   .compare .compare__content {
@@ -716,8 +700,8 @@ main .titulo__image img {
     gap: 1.5rem;
   }
   .compare .compare__main {
-    width: 20rem; /* Reduz ainda mais a largura dos cards para 20rem */
-    padding: 1.5rem; /* Ajusta o preenchimento interno */
+    width: 20rem;
+    padding: 1.5rem;
   }
   .compare .compare__atual,
   .compare .compare__nova {
@@ -731,14 +715,14 @@ main .titulo__image img {
     width: 20rem;
   }
   .compare #comparar {
-    width: 100%; /* Botão ocupa toda a largura */
-    height: 2.5rem; /* Menor altura do botão */
-    font-size: 0.875rem; /* Texto menor no botão */
-    padding: 0.5rem; /* Ajusta o preenchimento */
+    width: 100%;
+    height: 2.5rem;
+    font-size: 0.875rem;
+    padding: 0.5rem;
   }
   .compare #preco-atual,
   .compare #preco-nova {
-    font-size: 1.25rem; /* Reduz preço para 1.25rem */
+    font-size: 1.25rem;
   }
 }
 @media (max-width: 400px) {
@@ -813,15 +797,15 @@ main .titulo__image img {
   color: #ffffff;
   font-size: 1.25rem;
   font-weight: 700;
-  transition: all 0.3s ease-in-out; /* Adiciona uma transição suave */
+  transition: all 0.3s ease-in-out;
 }
 
 #comparar:hover {
-  background: #ffffff; /* Muda o fundo para branco */
-  color: #09a93f; /* Muda a cor do texto para verde */
-  border: 1px solid #09a93f; /* Mantém a borda verde */
-  box-shadow: 0px 4px 10px rgba(9, 169, 63, 0.4); /* Adiciona uma sombra */
-  cursor: pointer; /* Mostra o cursor como uma mão */
+  background: #ffffff;
+  color: #09a93f;
+  border: 1px solid #09a93f;
+  box-shadow: 0px 4px 10px rgba(9, 169, 63, 0.4);
+  cursor: pointer;
 }
 
 .conhecendo {
@@ -1146,7 +1130,7 @@ main .titulo__image img {
   display: flex;
   flex-direction: column;
   width: 17rem;
-  height: 20rem; /* Altura fixa para evitar alteração */
+  height: 20rem;
   align-items: center;
   border-radius: 1.85rem;
   border: 5px solid #09a93f;
@@ -1158,10 +1142,6 @@ main .titulo__image img {
   cursor: pointer;
   overflow: hidden;
   transition: background-color 0.3s, color 0.3s;
-  /* Estilo para os títulos e ícones */
-  /* Apenas o conteúdo padrão está visível inicialmente */
-  /* Ícones de Adição (+) e Subtração (-) */
-  /* Ícone de subtração em branco quando o card estiver ativo */
 }
 .missao .card.active {
   background-color: #09a93f;
@@ -1179,17 +1159,17 @@ main .titulo__image img {
 }
 .missao .card .default-content {
   display: flex;
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center; /* Centraliza verticalmente */
-  flex-direction: column; /* Organiza o ícone e título em coluna */
-  text-align: center; /* Alinha o texto do título */
-  gap: 1rem; /* Adiciona espaço entre ícone e título */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
   width: 100%;
-  height: 100%; /* Preenche toda a altura do card */
+  height: 100%;
 }
 .missao .card .icon-title {
-  font-size: 4rem; /* Tamanho do ícone aumentado */
-  color: #09a93f; /* Cor do ícone */
+  font-size: 4rem;
+  color: #09a93f;
 }
 .missao .card .default-title {
   color: #09a93f;
@@ -1200,7 +1180,7 @@ main .titulo__image img {
 .missao .card .additional-content {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Distribui os elementos com espaçamento */
+  justify-content: space-between;
   align-items: center;
   height: 100%;
   color: #ffffff;
@@ -1249,34 +1229,34 @@ main .titulo__image img {
 }
 .missao .card .add-icon.additional {
   display: block;
-  color: #ffffff; /* Cor branca para o ícone de subtração */
+  color: #ffffff;
 }
 .missao .card .card.active .add-icon.default {
   display: none;
 }
 .missao .card .card.active .add-icon.additional {
   display: block;
-  color: #ffffff; /* Cor branca para o ícone de subtração */
-  bottom: 10px; /* Mantém a mesma posição que o ícone de adição */
-  left: 10px; /* Mantém a mesma posição que o ícone de adição */
+  color: #ffffff;
+  bottom: 10px;
+  left: 10px;
 }
 @media (max-width: 1200px) {
   .missao h2 {
-    font-size: 3rem; /* Diminui o tamanho do título */
+    font-size: 3rem;
     line-height: 4rem;
   }
   .missao .missao__cards {
     flex-direction: column;
-    align-items: center; /* Centraliza os cards na coluna */
+    align-items: center;
   }
   .missao .card {
-    width: 80%; /* Faz os cards ocuparem mais espaço na tela menor */
-    margin: 1rem 0; /* Ajusta o espaçamento entre os cards */
+    width: 80%;
+    margin: 1rem 0;
   }
 }
 @media (max-width: 768px) {
   .missao h2 {
-    font-size: 2.5rem; /* Reduz ainda mais o tamanho do título */
+    font-size: 2.5rem;
     line-height: 3.5rem;
   }
   .missao .missao__cards {
@@ -1284,28 +1264,28 @@ main .titulo__image img {
     align-items: center;
   }
   .missao .card {
-    width: 90%; /* Faz os cards ocuparem ainda mais a tela */
+    width: 90%;
   }
   .missao .card .default-title {
-    font-size: 2rem; /* Diminui o tamanho do título nos cards */
+    font-size: 2rem;
   }
   .missao .card .texto-content {
-    font-size: 1rem; /* Diminui o tamanho do texto dentro dos cards */
+    font-size: 1rem;
   }
 }
 @media (max-width: 480px) {
   .missao h2 {
-    font-size: 2rem; /* Título menor em telas muito pequenas */
+    font-size: 2rem;
     line-height: 2.5rem;
   }
   .missao .card {
-    width: 100%; /* Faz os cards ocuparem toda a largura disponível */
+    width: 100%;
   }
   .missao .card .default-title {
-    font-size: 1.75rem; /* Tamanho do título dos cards reduzido */
+    font-size: 1.75rem;
   }
   .missao .card .texto-content {
-    font-size: 0.875rem; /* Tamanho do texto dos cards ajustado */
+    font-size: 0.875rem;
   }
 }
 
@@ -1646,7 +1626,7 @@ main .titulo__image img {
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 10px;
-  width: 100%; /* Garantir que ocupe 100% da largura disponível */
+  width: 100%;
 }
 
 .table-container {
@@ -1807,11 +1787,11 @@ td::after {
 .grafico__content {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Alinha centralmente os itens */
+  align-items: center;
   justify-content: center;
-  width: 90%; /* Aumenta a largura em telas pequenas */
+  width: 90%;
   margin: 0 auto;
-  text-align: center; /* Alinha o texto centralmente */
+  text-align: center;
   gap: 1.5rem;
 }
 .grafico h1 {
@@ -1870,7 +1850,7 @@ td::after {
 
 .grafico-tarifa-social canvas {
   max-width: 100%;
-  height: auto; /* Deixa o gráfico mais responsivo */
+  height: auto;
   border: 1px solid #ddd;
   background-color: #fff;
   border-radius: 8px;
@@ -2032,8 +2012,8 @@ body {
   justify-content: space-between;
   gap: 2rem;
   flex-wrap: wrap;
-  margin: 0 auto; /* Centraliza horizontalmente */
-  max-width: 1200px; /* Largura máxima do contêiner */
+  margin: 0 auto;
+  max-width: 1200px;
 }
 .blog__content .blog__cards div {
   width: 22%;
@@ -2069,8 +2049,8 @@ body {
 }
 @media (max-width: 1000px) and (min-width: 661px) {
   .blog .blog__cards {
-    justify-content: center; /* Alinha os itens centralizados horizontalmente */
-    gap: 1.5rem; /* Ajusta o espaçamento entre os cards */
+    justify-content: center;
+    gap: 1.5rem;
   }
   .blog .blog__cards div {
     width: 48%;
@@ -2078,8 +2058,8 @@ body {
 }
 @media (max-width: 650px) {
   .blog .blog__cards {
-    justify-content: center; /* Centraliza os itens horizontalmente */
-    gap: 1.5rem; /* Espaçamento entre os cards */
+    justify-content: center;
+    gap: 1.5rem;
   }
   .blog .blog__cards div {
     width: 48%;

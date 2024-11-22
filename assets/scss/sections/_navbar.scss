@@ -2,7 +2,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Estilo para a navbar */
 header {
   background: $gradient-titulo;
   font-family: $font;
@@ -66,7 +65,7 @@ header {
           position: absolute;
           top: 100%;
           left: 0;
-          background-color: var(--Color-2, #096639);
+          background-color: #096639;
           padding: 0.5rem 1rem;
           border-radius: 0.5rem;
           box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -86,19 +85,17 @@ header {
         }
 
         .dropdown-menu li a:hover {
-          background-color: var(--Color-3, #048c7f);
+          background-color: #048c7f;
         }
 
-        /* Ícone rotaciona quando o menu está ativo */
         &.active i {
           transform: rotate(180deg);
         }
       }
 
-      /* Hover geral para todos os itens */
       div:hover,
       li:hover {
-        background: var(--Color-2, #096639);
+        background: #096639;
         border-radius: 3.25rem;
       }
 
@@ -109,29 +106,26 @@ header {
         display: inline-block;
       }
 
-      /* Garantir que 'Sobre' tenha o fundo verde escuro quando o dropdown está aberto */
       li.sobre {
         &.active,
         &.active:hover {
-          background: var(--Color-3, #048c7f);
+          background: #048c7f;
           border-radius: 3.25rem;
         }
 
         &:hover {
-          background: var(--Color-3, #048c7f);
+          background: #048c7f;
           border-radius: 3.25rem;
         }
       }
 
-      /* Aplicando a mesma cor de fundo para 'Sobre' quando o dropdown estiver ativo */
       .dropdown.active + .sobre {
-        background: var(--Color-3, #048c7f);
+        background: #048c7f;
       }
     }
   }
 }
 
-/* Corrigir a área de hover */
 .nav-item {
   position: relative;
 }
@@ -148,7 +142,6 @@ header {
   padding: 0;
 }
 
-/* Quando o dropdown estiver ativo, o menu será visível */
 .dropdown-menu {
   display: none;
   position: absolute;
@@ -160,12 +153,10 @@ header {
   width: 180px;
 }
 
-/* Quando o dropdown estiver com a classe 'active', mostramos o menu */
 .dropdown.active .dropdown-menu {
   display: block;
 }
 
-/* Ajuste do hover nos itens do dropdown */
 .dropdown .dropdown-menu li a {
   padding: 0.5rem;
   display: block;
@@ -173,12 +164,10 @@ header {
   text-decoration: none;
 }
 
-/* Estilo de hover para os itens do dropdown */
 .dropdown .dropdown-menu li a:hover {
   background-color: #096639;
 }
 
-/* Configuração inicial para o menu */
 .menu {
   display: flex;
   gap: 1rem;
@@ -200,7 +189,6 @@ header {
   }
 }
 
-/* Estilo para telas menores */
 @media (max-width: 768px) {
   .hamburger {
     display: block;
@@ -213,7 +201,7 @@ header {
     position: absolute;
     top: 5rem;
     right: 0;
-    background-color: var(--Color-2, #096639);
+    background-color: #096639;
     width: 100%;
     z-index: 999;
     padding: 1rem 0;

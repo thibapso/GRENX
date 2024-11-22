@@ -7,11 +7,11 @@
   &__content {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Alinha centralmente os itens */
+    align-items: center;
     justify-content: center;
-    width: 90%; /* Aumenta a largura em telas pequenas */
+    width: 90%;
     margin: 0 auto;
-    text-align: center; /* Alinha o texto centralmente */
+    text-align: center;
     gap: 1.5rem;
   }
 
@@ -79,7 +79,7 @@
 
 .grafico-tarifa-social canvas {
   max-width: 100%;
-  height: auto; /* Deixa o gráfico mais responsivo */
+  height: auto;
   border: 1px solid #ddd;
   background-color: #fff;
   border-radius: 8px;

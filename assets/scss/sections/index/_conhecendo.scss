@@ -37,16 +37,15 @@
       font-weight: 400;
       line-height: 2rem;
       width: 37.0625rem;
-      height: auto; // Permite altura automática
+      height: auto;
     }
 
-    // Estilo da imagem
     img {
-      max-width: 100%;  // Torna a imagem responsiva
-      height: auto;     // Mantém a proporção da imagem
-      display: block;   // Garante que a imagem seja tratada como um bloco
-      margin-left: auto; // Centraliza a imagem dentro do contêiner
-      margin-right: auto; // Centraliza a imagem dentro do contêiner
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 
@@ -93,7 +92,6 @@
     }
   }
 
-  // Responsividade
   @media (max-width: 1200px) {
     &__content {
       flex-direction: column;
@@ -102,18 +100,18 @@
       h2 {
         font-size: 3rem;
         line-height: 4rem;
-        text-align: center; // Centraliza o texto
+        text-align: center;
       }
 
       article {
-        width: 100%; // Ocupa toda a largura
+        width: 100%;
         text-align: center;
       }
     }
 
     &__data {
-      flex-wrap: wrap; // Permite que os itens fiquem em várias linhas
-      justify-content: center; // Centraliza os itens
+      flex-wrap: wrap;
+      justify-content: center;
     }
   }
 
@@ -122,7 +120,7 @@
       gap: 2rem;
 
       p {
-        font-size: 0.875rem; // Reduz o tamanho do texto
+        font-size: 0.875rem;
       }
 
       h2 {
@@ -132,11 +130,11 @@
     }
 
     &__data .number {
-      font-size: 2rem; // Reduz o tamanho dos números
+      font-size: 2rem;
     }
 
     &__data i {
-      font-size: 2.5rem; // Ajusta o tamanho do ícone
+      font-size: 2.5rem;
     }
   }
 
@@ -153,7 +151,7 @@
       }
 
       article {
-        font-size: 1rem; // Reduz o tamanho do texto
+        font-size: 1rem;
         line-height: 1.5rem;
       }
     }
@@ -162,15 +160,15 @@
       gap: 1rem;
 
       .conhecendo__iten {
-        gap: 0.5rem; // Reduz o espaçamento entre os itens
+        gap: 0.5rem;
       }
 
       .number {
-        font-size: 1.5rem; // Reduz o tamanho dos números
+        font-size: 1.5rem;
       }
 
       i {
-        font-size: 2rem; // Reduz o tamanho do ícone
+        font-size: 2rem;
       }
     }
   }

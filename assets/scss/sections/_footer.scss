@@ -121,7 +121,6 @@ footer {
     }
   }
 
-  // Responsividade
   @media (max-width: 1024px) {
     .content {
       flex-direction: column;
@@ -177,7 +176,7 @@ footer {
     .footer .content .column--newsletter .newsletter-btn {
       width: 100%;
       border-radius: 12px;
-      font-size: 0.5rem; /* Reduzir o tamanho da fonte para telas menores */
+      font-size: 0.5rem;
     }
   }
 }

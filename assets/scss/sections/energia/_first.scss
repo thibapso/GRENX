@@ -22,13 +22,12 @@
       text-align: center;
     }
 
-    // Estilização para imagens responsivas
     img {
       max-width: 100%;
       height: auto;
       object-fit: cover;
       display: block;
-      margin: 0 auto; // Centraliza a imagem
+      margin: 0 auto;
     }
   }
 
@@ -68,7 +67,7 @@
       }
 
       img {
-        max-width: 90%; // Limita a largura da imagem em telas pequenas
+        max-width: 90%;
       }
     }
   }

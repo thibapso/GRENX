@@ -47,7 +47,7 @@
     display: flex;
     flex-direction: column;
     width: 17rem;
-    height: 20rem; /* Altura fixa para evitar alteração */
+    height: 20rem;
     align-items: center;
     border-radius: 1.85rem;
     border: 5px solid #09a93f;
@@ -77,21 +77,20 @@
       }
     }
 
-    /* Estilo para os títulos e ícones */
     .default-content {
       display: flex;
-      justify-content: center; /* Centraliza horizontalmente */
-      align-items: center; /* Centraliza verticalmente */
-      flex-direction: column; /* Organiza o ícone e título em coluna */
-      text-align: center; /* Alinha o texto do título */
-      gap: 1rem; /* Adiciona espaço entre ícone e título */
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      gap: 1rem;
       width: 100%;
-      height: 100%; /* Preenche toda a altura do card */
+      height: 100%;
     }
 
     .icon-title {
-      font-size: 4rem; /* Tamanho do ícone aumentado */
-      color: #09a93f; /* Cor do ícone */
+      font-size: 4rem;
+      color: #09a93f;
     }
 
     .default-title {
@@ -104,7 +103,7 @@
     .additional-content {
       display: flex;
       flex-direction: column;
-      justify-content: space-between; /* Distribui os elementos com espaçamento */
+      justify-content: space-between;
       align-items: center;
       height: 100%;
       color: #ffffff;
@@ -128,7 +127,6 @@
       width: 100%;
     }
 
-    /* Apenas o conteúdo padrão está visível inicialmente */
     .default-content {
       display: block;
     }
@@ -149,7 +147,6 @@
       display: none;
     }
 
-    /* Ícones de Adição (+) e Subtração (-) */
     .add-icon {
       position: absolute;
       bottom: 10px;
@@ -165,43 +162,41 @@
 
     .add-icon.additional {
       display: block;
-      color: #ffffff; /* Cor branca para o ícone de subtração */
+      color: #ffffff;
     }
 
     .card.active .add-icon.default {
       display: none;
     }
 
-    /* Ícone de subtração em branco quando o card estiver ativo */
     .card.active .add-icon.additional {
       display: block;
-      color: #ffffff; /* Cor branca para o ícone de subtração */
-      bottom: 10px; /* Mantém a mesma posição que o ícone de adição */
-      left: 10px; /* Mantém a mesma posição que o ícone de adição */
+      color: #ffffff;
+      bottom: 10px;
+      left: 10px;
     }
   }
 
-  // Responsividade
   @media (max-width: 1200px) {
     h2 {
-      font-size: 3rem; /* Diminui o tamanho do título */
+      font-size: 3rem;
       line-height: 4rem;
     }
 
     .missao__cards {
       flex-direction: column;
-      align-items: center; /* Centraliza os cards na coluna */
+      align-items: center;
     }
 
     .card {
-      width: 80%; /* Faz os cards ocuparem mais espaço na tela menor */
-      margin: 1rem 0; /* Ajusta o espaçamento entre os cards */
+      width: 80%;
+      margin: 1rem 0;
     }
   }
 
   @media (max-width: 768px) {
     h2 {
-      font-size: 2.5rem; /* Reduz ainda mais o tamanho do título */
+      font-size: 2.5rem;
       line-height: 3.5rem;
     }
 
@@ -211,34 +206,34 @@
     }
 
     .card {
-      width: 90%; /* Faz os cards ocuparem ainda mais a tela */
+      width: 90%;
     }
 
     .card .default-title {
-      font-size: 2rem; /* Diminui o tamanho do título nos cards */
+      font-size: 2rem;
     }
 
     .card .texto-content {
-      font-size: 1rem; /* Diminui o tamanho do texto dentro dos cards */
+      font-size: 1rem;
     }
   }
 
   @media (max-width: 480px) {
     h2 {
-      font-size: 2rem; /* Título menor em telas muito pequenas */
+      font-size: 2rem;
       line-height: 2.5rem;
     }
 
     .card {
-      width: 100%; /* Faz os cards ocuparem toda a largura disponível */
+      width: 100%;
     }
 
     .card .default-title {
-      font-size: 1.75rem; /* Tamanho do título dos cards reduzido */
+      font-size: 1.75rem;
     }
 
     .card .texto-content {
-      font-size: 0.875rem; /* Tamanho do texto dos cards ajustado */
+      font-size: 0.875rem;
     }
   }
 }

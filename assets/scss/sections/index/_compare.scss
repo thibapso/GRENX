@@ -7,23 +7,23 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: left; // Alinha todo o texto à esquerda
+  text-align: left;
 
   &__title {
     color: #096639;
     font-size: 3rem;
     font-style: normal;
     font-weight: 700;
-    line-height: 5rem; /* 166.667% */
+    line-height: 5rem;
     text-transform: capitalize;
   }
 
   &__content {
-    width: 80%; // Define a largura de 80%
+    width: 80%;
     display: flex;
     flex-direction: column;
-    align-items: center; // Centraliza os filhos do conteúdo
-    gap: 2rem; // Espaçamento entre os elementos
+    align-items: center;
+    gap: 2rem;
   }
 
   &__cards {
@@ -35,7 +35,7 @@
   &__empresa {
     display: flex;
     gap: 4rem;
-    position: relative; // Adiciona posição relativa para o posicionamento do triângulo
+    position: relative;
   }
 
   &__main {
@@ -88,7 +88,7 @@
     border-radius: 1.85rem;
     height: 20rem;
     width: 12rem;
-    position: relative; // Adiciona posição relativa para o triângulo ser posicionado em relação a este card
+    position: relative;
 
     h2 {
       font-size: 1.5rem;
@@ -118,7 +118,7 @@
 
     &:focus {
       border: 2.5px solid #096639;
-      outline: none; /* Remove a borda padrão azul */
+      outline: none;
     }
   }
 
@@ -146,74 +146,71 @@
   }
 
   article {
-    line-height: 2rem; /* 200% */
+    line-height: 2rem;
     font-size: 1rem;
     color: #096639;
     width: 25rem;
   }
 
-  // Estilos para o triângulo
   .compare__empresa img[src*="triangulo"] {
-    position: absolute; // Posiciona o triângulo de forma absoluta
-    top: -15px; // Ajuste a distância conforme necessário
-    left: 50%; // Centraliza o triângulo horizontalmente em relação ao card
-    transform: translateX(-50%); // Garantir que ele esteja centralizado
-    width: 50px; // Aumentei o tamanho para 60px, ajuste conforme necessário
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
   }
-
-  // Responsividade para telas menores
 
   @media (max-width: 1200px) {
     .compare__cards {
       flex-direction: column;
-      gap: 3rem; // Ajuste do espaçamento entre os cartões
+      gap: 3rem;
     }
 
     .compare__main {
-      width: 24rem; // Reduz a largura dos cartões
-      height: auto; // Permite altura automática
+      width: 24rem;
+      height: auto;
     }
 
     .compare__atual,
     .compare__nova {
-      width: 100%; // Os cartões ocupam toda a largura disponível
-      max-width: 20rem; // Define uma largura máxima
+      width: 100%;
+      max-width: 20rem;
     }
   }
 
   @media (max-width: 768px) {
     .compare {
-      padding: 2rem 1rem; // Reduz o espaçamento geral
-      text-align: center; // Alinha o texto ao centro para telas menores
+      padding: 2rem 1rem;
+      text-align: center;
     }
 
     .compare__title {
       font-size: 2rem;
-      line-height: 3rem; // Ajusta o tamanho e o espaçamento da linha do título
+      line-height: 3rem;
       text-align: center;
       width: 25rem;
     }
 
     .compare__content {
-      width: 100%; // Ocupa toda a largura
+      width: 100%;
     }
 
     .compare__empresa {
-      flex-direction: column; // Empilha os cartões verticalmente
+      flex-direction: column;
       gap: 2rem;
     }
 
     .compare__main {
-      width: 90%; // Ajusta o tamanho do card principal
-      max-width: 22rem; // Limita o tamanho máximo
+      width: 90%;
+      max-width: 22rem;
     }
 
     .compare__input input {
-      max-width: 100%; /* Input ocupa toda a largura disponível */
+      max-width: 100%;
     }
 
     button {
-      width: 100%; /* Botão ocupa toda a largura */
+      width: 100%;
       padding: 1rem;
       font-size: 1rem;
     }
@@ -221,8 +218,8 @@
 
   @media (max-width: 480px) {
     .compare {
-      padding: 1.5rem 1rem; // Reduz o espaçamento geral
-      text-align: center; // Alinha o texto ao centro para telas menores
+      padding: 1.5rem 1rem;
+      text-align: center;
 
       &__texto-main {
         background-color: #f3f3f3;
@@ -241,28 +238,28 @@
     }
 
     .compare__title {
-      font-size: 1.5rem; /* Tamanho da fonte menor */
-      line-height: 2rem; // Ajusta o espaçamento do título para telas pequenas
+      font-size: 1.5rem;
+      line-height: 2rem;
     }
 
     .compare__content {
-      width: 90%; // Reduz a largura para 90% da tela
+      width: 90%;
     }
 
     .compare__empresa {
-      flex-direction: column; // Empilha os cartões verticalmente
-      gap: 1.5rem; // Reduz o espaçamento entre os cartões
+      flex-direction: column;
+      gap: 1.5rem;
     }
 
     .compare__main {
-      width: 20rem; /* Reduz ainda mais a largura dos cards para 20rem */
-      padding: 1.5rem; /* Ajusta o preenchimento interno */
+      width: 20rem;
+      padding: 1.5rem;
     }
 
     .compare__atual,
     .compare__nova {
-      width: 90%; // Ajusta a largura para 90% dos cartões
-      max-width: 16rem; // Limita a largura máxima dos cards
+      width: 90%;
+      max-width: 16rem;
     }
 
     article {
@@ -273,48 +270,47 @@
     }
 
     #comparar {
-      width: 100%; /* Botão ocupa toda a largura */
-      height: 2.5rem; /* Menor altura do botão */
-      font-size: 0.875rem; /* Texto menor no botão */
-      padding: 0.5rem; /* Ajusta o preenchimento */
+      width: 100%;
+      height: 2.5rem;
+      font-size: 0.875rem;
+      padding: 0.5rem;
     }
 
-    /* Redução nos preços */
     #preco-atual,
     #preco-nova {
-      font-size: 1.25rem; /* Reduz preço para 1.25rem */
+      font-size: 1.25rem;
     }
   }
 
   @media (max-width: 400px) {
     .compare {
-      padding: 1.5rem 0.5rem; // Ajuste do espaçamento geral
+      padding: 1.5rem 0.5rem;
     }
 
     .compare__title {
-      font-size: 1.25rem; // Tamanho de fonte menor
-      line-height: 1.8rem; // Ajuste de altura da linha
+      font-size: 1.25rem;
+      line-height: 1.8rem;
       width: 20rem;
     }
 
     .compare__content {
-      width: 90%; // Reduz a largura do conteúdo
+      width: 90%;
     }
 
     .compare__cards {
-      flex-direction: column; // Empilha os cartões em telas menores
-      gap: 1.5rem; // Ajusta o espaçamento
+      flex-direction: column;
+      gap: 1.5rem;
     }
 
     .compare__empresa {
-      flex-direction: column; // Alinha verticalmente os elementos
+      flex-direction: column;
       gap: 2rem;
     }
 
     .compare__main {
-      width: 16rem; // Reduz a largura do card principal
-      height: auto; // Permite altura automática para ajuste de conteúdo
-      padding: 1rem; // Ajuste do padding interno
+      width: 16rem;
+      height: auto;
+      padding: 1rem;
     }
 
     .compare__where {
@@ -330,27 +326,27 @@
 
     .compare__atual,
     .compare__nova {
-      width: 100%; // Os cartões ocupam toda a largura disponível
-      max-width: 14rem; // Limita a largura máxima
-      padding: 1rem; // Ajuste de padding interno
+      width: 100%;
+      max-width: 14rem;
+      padding: 1rem;
       margin-right: 4rem;
     }
 
     .compare__atual h2,
     .compare__nova h2 {
-      font-size: 1.25rem; // Tamanho da fonte dos títulos dentro dos cards
+      font-size: 1.25rem;
     }
 
     #comparar {
-      width: 100%; // Botão ocupa toda a largura
-      height: 2.5rem; // Ajuste na altura do botão
-      font-size: 1rem; // Tamanho de fonte do botão
-      padding: 0.5rem; // Ajuste no padding do botão
+      width: 100%;
+      height: 2.5rem;
+      font-size: 1rem;
+      padding: 0.5rem;
     }
 
     #preco-atual,
     #preco-nova {
-      font-size: 1rem; // Tamanho de fonte menor para preços
+      font-size: 1rem;
     }
   }
 }
@@ -370,13 +366,13 @@
   color: #ffffff;
   font-size: 1.25rem;
   font-weight: 700;
-  transition: all 0.3s ease-in-out; /* Adiciona uma transição suave */
+  transition: all 0.3s ease-in-out;
 }
 
 #comparar:hover {
-  background: #ffffff; /* Muda o fundo para branco */
-  color: #09a93f; /* Muda a cor do texto para verde */
-  border: 1px solid #09a93f; /* Mantém a borda verde */
-  box-shadow: 0px 4px 10px rgba(9, 169, 63, 0.4); /* Adiciona uma sombra */
-  cursor: pointer; /* Mostra o cursor como uma mão */
+  background: #ffffff;
+  color: #09a93f;
+  border: 1px solid #09a93f;
+  box-shadow: 0px 4px 10px rgba(9, 169, 63, 0.4);
+  cursor: pointer;
 }

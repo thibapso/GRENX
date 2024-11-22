@@ -22,11 +22,11 @@
       justify-content: space-between;
       gap: 2rem;
       flex-wrap: wrap;
-      margin: 0 auto; /* Centraliza horizontalmente */
-      max-width: 1200px; /* Largura máxima do contêiner */
+      margin: 0 auto;
+      max-width: 1200px;
 
       div {
-        width: 22%;  // Para telas grandes
+        width: 22%;
 
         img {
           width: 100%;
@@ -65,34 +65,31 @@
     }
   }
 
-  // Media Query para telas entre 1000px e 660px (2 blogs por linha)
   @media (max-width: 1000px) and (min-width: 661px) {
     .blog__cards {
-      justify-content: center; /* Alinha os itens centralizados horizontalmente */
-      gap: 1.5rem; /* Ajusta o espaçamento entre os cards */
+      justify-content: center;
+      gap: 1.5rem;
     }
 
     .blog__cards div {
-      width: 48%;  // Exibe dois itens por linha entre 1000px e 660px
+      width: 48%;
     }
   }
 
-  // Media Query para telas menores que 650px (2 blogs por linha)
   @media (max-width: 650px) {
     .blog__cards {
-      justify-content: center; /* Centraliza os itens horizontalmente */
-      gap: 1.5rem; /* Espaçamento entre os cards */
+      justify-content: center;
+      gap: 1.5rem;
     }
 
     .blog__cards div {
-      width: 48%;  // Exibe dois itens por linha em telas de 650px
+      width: 48%;
     }
   }
 
-  // Media Query para telas menores que 400px (1 blog por linha)
   @media (max-width: 400px) {
     .blog__cards div {
-      width: 100%;  // Exibe um item por linha em telas de 400px
+      width: 100%;
     }
   }
 }

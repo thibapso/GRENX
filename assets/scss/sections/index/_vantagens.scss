@@ -61,38 +61,36 @@
     line-height: 2rem;
   }
 
-  // Responsividade para telas de até 1200px
   @media (max-width: 1200px) {
     &__content {
-      gap: 6rem; // Reduz o espaçamento entre os blocos
-      flex-wrap: wrap; // Permite que os elementos fiquem em várias linhas
+      gap: 6rem;
+      flex-wrap: wrap;
       justify-content: center;
     }
 
     &__iten {
-      margin: 2rem 0; // Reduz o espaçamento entre os itens
+      margin: 2rem 0;
     }
 
     &__iten article {
-      width: 100%; // Ocupa toda a largura disponível
+      width: 100%;
     }
 
     &__title {
-      font-size: 3rem; // Reduz o tamanho do título
+      font-size: 3rem;
       line-height: 4rem;
-      text-align: center; // Centraliza o texto
+      text-align: center;
     }
 
     &__veja {
-      text-align: center; // Centraliza o subtítulo
+      text-align: center;
     }
 
-    // Centraliza a imagem da nova div em dispositivos menores que 1200px
     .vantagens__content div img {
-      max-width: 100%;  // Garante que a imagem se ajuste ao tamanho do contêiner
-      display: block;   // Garante que a imagem seja tratada como um bloco
-      margin-left: auto;  // Centraliza a imagem horizontalmente
-      margin-right: auto; // Centraliza a imagem horizontalmente
+      max-width: 100%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 
@@ -100,27 +98,27 @@
     padding: 3rem 1rem;
 
     &__content {
-      flex-direction: column; // Empilha os elementos
-      gap: 2rem; // Espaçamento menor entre os blocos
+      flex-direction: column;
+      gap: 2rem;
     }
 
     &__title {
-      font-size: 2.5rem; // Ajusta o tamanho do título
+      font-size: 2.5rem;
       line-height: 3.5rem;
     }
 
     &__iten {
-      flex-direction: column; // Reorganiza os itens verticalmente
-      align-items: center; // Centraliza os itens
-      text-align: center; // Centraliza o texto
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
 
     &__iten img {
-      width: 80px; // Reduz o tamanho das imagens
+      width: 80px;
     }
 
     &__iten article {
-      font-size: 1rem; // Reduz o tamanho do texto
+      font-size: 1rem;
       line-height: 1.5rem;
     }
   }
@@ -129,24 +127,24 @@
     padding: 2rem 1rem;
 
     &__title {
-      font-size: 2rem; // Reduz o tamanho do título ainda mais
+      font-size: 2rem;
       line-height: 2.5rem;
     }
 
     &__iten {
-      margin: 1.5rem 0; // Espaçamento menor entre os itens
+      margin: 1.5rem 0;
     }
 
     &__iten img {
-      width: 60px; // Reduz ainda mais as imagens
+      width: 60px;
     }
 
     &__iten h2 {
-      font-size: 1.25rem; // Ajusta o tamanho do subtítulo
+      font-size: 1.25rem;
     }
 
     &__iten article {
-      font-size: 0.875rem; // Reduz o tamanho do texto
+      font-size: 0.875rem;
     }
   }
 }

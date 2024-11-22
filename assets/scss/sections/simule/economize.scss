@@ -1,7 +1,7 @@
 .economize {
-  background: #f3f3f3; // Fundo da seção
+  background: #f3f3f3;
   font-family: $font;
-  padding: 3rem 0; // Espaçamento da seção
+  padding: 3rem 0;
   color: #096639;
 
   &__content {
@@ -9,18 +9,17 @@
     align-items: center;
     justify-content: space-between;
     width: 80%;
-    background-color: #f7aa06; // Fundo laranja para o conteúdo
+    background-color: #f7aa06;
     padding: 2rem;
     margin: 0 auto;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     gap: 2rem;
 
-    // Centralizar a imagem no contêiner
     img {
       margin-top: -2.6rem;
-      max-width: 100%; // Garante que a imagem não ultrapasse o tamanho do contêiner
-      display: block; // Remove qualquer comportamento de inline
+      max-width: 100%;
+      display: block;
       margin-left: auto;
       margin-right: auto;
     }
@@ -40,9 +39,9 @@
     }
 
     .economize__link {
-      align-self: center; // Centraliza verticalmente
-      display: inline-block; // Garante comportamento de botão
-      text-decoration: none; // Remove sublinhado
+      align-self: center;
+      display: inline-block;
+      text-decoration: none;
       border-radius: 0.45rem;
       border: 3px solid #f5f6f7;
       background-color: #09a93f;
@@ -51,69 +50,67 @@
       padding: 0.85rem 1.5rem;
       white-space: nowrap;
       text-align: center;
-      transition: all 0.3s ease-in-out; // Suaviza transições
+      transition: all 0.3s ease-in-out;
 
       &:hover {
-        background-color: #0c7f32; // Cor de fundo mais escura no hover
-        color: #e6e6e6; // Cor do texto no hover
-        transform: scale(1.05); // Leve aumento no tamanho
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Sombra no hover
+        background-color: #0c7f32;
+        color: #e6e6e6;
+        transform: scale(1.05);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       }
     }
   }
 
-  // Media Query para telas menores que 768px (layout horizontal e fonte menor)
   @media (max-width: 768px) {
     .economize__content {
-      flex-direction: row; // Exibe os itens em linha (horizontal) em vez de coluna
-      align-items: flex-start; // Alinha os itens no topo
-      gap: 1rem; // Menor espaço entre os itens
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 1rem;
     }
 
     article {
-      font-size: 1rem; // Reduz o tamanho da fonte para não vazar
-      width: auto; // Ajusta a largura para caber melhor no layout
+      font-size: 1rem;
+      width: auto;
     }
 
     .economize__link {
-      width: 100%; // Deixa o botão ocupar toda a largura disponível
-      padding: 0.75rem 1rem; // Ajusta o tamanho do botão para telas menores
+      width: 100%;
+      padding: 0.75rem 1rem;
     }
 
     img {
-      max-width: 50%; // Limita a largura da imagem para não ficar muito grande
-      margin-top: 0; // Remove a margem superior extra
-      margin-left: auto; // Centraliza a imagem horizontalmente
-      margin-right: auto; // Centraliza a imagem horizontalmente
+      max-width: 50%;
+      margin-top: 0;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     hr {
-      display: none; // Esconde o <hr> em telas menores que 768px
+      display: none;
     }
   }
 
-  // Media Query para telas menores que 480px (disposição e ajustes ainda mais responsivos)
   @media (max-width: 550px) {
     .economize__content {
-      flex-direction: column; // Coloca os itens em coluna em telas ainda menores
-      gap: 1rem; // Menor espaço entre os itens
+      flex-direction: column;
+      gap: 1rem;
     }
 
     article {
-      font-size: 0.9rem; // Reduz ainda mais o tamanho da fonte para telas pequenas
+      font-size: 0.9rem;
     }
 
     img {
-      max-width: 80%; // Ajusta o tamanho da imagem para caber melhor
+      max-width: 80%;
     }
 
     .economize__link {
-      width: auto; // Não ocupa toda a largura
-      padding: 0.65rem 1rem; // Ajusta o botão para caber melhor
+      width: auto;
+      padding: 0.65rem 1rem;
     }
 
     hr {
-      display: none; // Esconde o <hr> em telas menores que 480px também
+      display: none;
     }
   }
 }
