@@ -16,6 +16,11 @@ footer {
     gap: 5rem;
     padding: 2rem;
 
+    .logo__inferior {
+      width: 12rem;
+      height: 3rem;
+    }
+
     .column {
       display: flex;
       flex-direction: column;

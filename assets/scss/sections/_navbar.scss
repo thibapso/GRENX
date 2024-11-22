@@ -9,7 +9,7 @@ header {
   color: #ffffff;
   display: flex;
   justify-content: center;
-  height: 5rem;
+  height: 6rem;
   align-items: center;
   position: fixed;
   top: 0;
@@ -25,6 +25,11 @@ header {
     align-items: center;
     justify-content: space-between;
     height: 4rem;
+
+    .logo__superior {
+      width: 16rem;
+      height: 4rem;
+    }
 
     ul {
       display: flex;
@@ -186,6 +191,13 @@ header {
   color: #fff;
   font-size: 1.5rem;
   cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  header nav .logo__superior {
+    width: 12rem;
+    height: 3rem;
+  }
 }
 
 /* Estilo para telas menores */

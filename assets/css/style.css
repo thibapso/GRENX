@@ -14,7 +14,7 @@ header {
   color: #ffffff;
   display: flex;
   justify-content: center;
-  height: 5rem;
+  height: 6rem;
   align-items: center;
   position: fixed;
   top: 0;
@@ -29,6 +29,10 @@ header nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 4rem;
+}
+header nav .logo__superior {
+  width: 16rem;
   height: 4rem;
 }
 header nav ul {
@@ -174,6 +178,12 @@ header nav ul .dropdown.active + .sobre {
   cursor: pointer;
 }
 
+@media (max-width: 900px) {
+  header nav .logo__superior {
+    width: 12rem;
+    height: 3rem;
+  }
+}
 /* Estilo para telas menores */
 @media (max-width: 768px) {
   .hamburger {
@@ -220,6 +230,10 @@ footer .content {
   max-width: 1200px;
   gap: 5rem;
   padding: 2rem;
+}
+footer .content .logo__inferior {
+  width: 12rem;
+  height: 3rem;
 }
 footer .content .column {
   display: flex;
