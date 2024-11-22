@@ -85,7 +85,7 @@ footer {
             font-size: 1rem;
             font-weight: 700;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: all 0.3s ease-in-out;
 
             &:hover {
               background-color: #218838;
@@ -96,10 +96,23 @@ footer {
       }
     }
 
+    a {
+      text-decoration: none;
+      color: #ffffff;
+    }
+
     .content__icon {
       font-size: 3rem;
       display: flex;
       gap: 1rem;
+
+      i {
+        transition: all 0.2s ease-in-out;
+      }
+
+      i:hover {
+        color: #f7aa06;
+      }
     }
   }
 

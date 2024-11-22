@@ -282,16 +282,26 @@ footer .content .column--newsletter .newsletter .newsletter-btn {
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease-in-out;
 }
 footer .content .column--newsletter .newsletter .newsletter-btn:hover {
   background-color: #218838;
+  color: #ffffff;
+}
+footer .content a {
+  text-decoration: none;
   color: #ffffff;
 }
 footer .content .content__icon {
   font-size: 3rem;
   display: flex;
   gap: 1rem;
+}
+footer .content .content__icon i {
+  transition: all 0.2s ease-in-out;
+}
+footer .content .content__icon i:hover {
+  color: #f7aa06;
 }
 @media (max-width: 1024px) {
   footer .content {
